@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+.output/
+.vercel/
+.wrangler/
+
+# Cloudflare
+.dev.vars
+wrangler.toml.bak
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# OMC orchestration state
+.omc/
+
+# Local Claude config
+.claude.json
+
+# Stitch working files — CONTAIN API KEY, never commit
+_stitch/
+_probe.cjs
+stitch_project.json
+stitch_*.json
+
+# Local review artifacts
+.playwright-mcp/
+review-*.jpeg
+review-*.png

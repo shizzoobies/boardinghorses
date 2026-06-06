@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Horse Haven</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-tertiary-fixed-variant": "#474743",
+                            "surface-variant": "#f1dfd1",
+                            "secondary-fixed-dim": "#baccb4",
+                            "on-primary-fixed": "#301400",
+                            "on-background": "#231a11",
+                            "secondary": "#536350",
+                            "primary": "#6f4627",
+                            "primary-fixed": "#ffdcc5",
+                            "on-primary": "#ffffff",
+                            "error": "#ba1a1a",
+                            "surface-bright": "#fff8f4",
+                            "on-secondary-fixed": "#111f10",
+                            "surface-container-high": "#f7e5d7",
+                            "tertiary-container": "#696864",
+                            "secondary-fixed": "#d6e8d0",
+                            "on-error": "#ffffff",
+                            "surface-container-lowest": "#ffffff",
+                            "on-primary-fixed-variant": "#653d1e",
+                            "tertiary-fixed-dim": "#c9c6c1",
+                            "surface-container-highest": "#f1dfd1",
+                            "error-container": "#ffdad6",
+                            "surface-tint": "#805533",
+                            "on-secondary-container": "#576754",
+                            "on-surface-variant": "#51443c",
+                            "tertiary": "#51504c",
+                            "outline": "#83746b",
+                            "on-tertiary-container": "#eae8e2",
+                            "on-surface": "#231a11",
+                            "on-secondary": "#ffffff",
+                            "on-secondary-fixed-variant": "#3b4b39",
+                            "surface-container": "#fdebdc",
+                            "on-primary-container": "#ffe3d1",
+                            "primary-container": "#8b5e3c",
+                            "inverse-on-surface": "#ffeee0",
+                            "surface-dim": "#e8d7c9",
+                            "on-tertiary": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "background": "#fff8f4",
+                            "primary-fixed-dim": "#f4bb92",
+                            "inverse-surface": "#392f25",
+                            "surface": "#fff8f4",
+                            "secondary-container": "#d3e5cd",
+                            "surface-container-low": "#fff1e7",
+                            "outline-variant": "#d5c3b8",
+                            "inverse-primary": "#f4bb92",
+                            "tertiary-fixed": "#e5e2dc",
+                            "on-tertiary-fixed": "#1c1c18"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "margin-mobile": "16px",
+                            "base": "8px",
+                            "xs": "4px",
+                            "lg": "48px",
+                            "md": "24px",
+                            "xl": "80px",
+                            "sm": "12px",
+                            "gutter": "24px",
+                            "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                            "headline-md": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "display-lg": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "label-md": [
+                                    "Source Sans 3"
+                            ],
+                            "body-md": [
+                                    "Source Sans 3"
+                            ],
+                            "headline-lg-mobile": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "body-lg": [
+                                    "Source Sans 3"
+                            ],
+                            "headline-lg": [
+                                    "Plus Jakarta Sans"
+                            ]
+                    },
+                    "fontSize": {
+                            "headline-md": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "32px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "display-lg": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "56px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "label-md": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "24px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "headline-lg-mobile": [
+                                    "28px",
+                                    {
+                                            "lineHeight": "36px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "headline-lg": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "fontWeight": "600"
+                                    }
+                            ]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shadow-warm {
+            box-shadow: 0 10px 25px -5px rgba(111, 70, 39, 0.1), 0 8px 10px -6px rgba(111, 70, 39, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-[72px]">
+<!-- TopNavBar Shared Component -->
+<nav class="bg-surface dark:bg-surface-container-low text-primary dark:text-primary-fixed-dim font-body-md text-body-md fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+                Horse Haven
+            </a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex items-center gap-lg">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="index.html">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="boarding.html">Boarding</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="lessons.html">Lessons</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="gallery.html">Gallery</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="about.html">About</a></li>
+<li><a class="text-primary font-bold border-b-2 border-primary pb-1 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="contact.html">Contact</a></li>
+</ul>
+<!-- Primary Action -->
+<div class="hidden md:block">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:-translate-y-[2px] shadow-warm transition-transform duration-200" href="contact.html">Contact Us</a>
+</div>
+<!-- Mobile Menu Toggle (Visual only for layout) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Header Section -->
+<header class="relative px-margin-mobile md:px-margin-desktop py-xl overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-high rounded-bl-full opacity-50 -z-10"></div>
+<div class="max-w-4xl mx-auto text-center space-y-md">
+<h1 class="font-display-lg text-display-lg text-on-background">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    We'd love to hear from you. Whether you have a question about boarding, want to schedule a lesson, or just want to visit the farm, our doors (and stall gates) are always open.
+                </p>
+</div>
+</header>
+<!-- Contact Section (Form & Info) -->
+<section class="px-margin-mobile md:px-margin-desktop py-lg max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Left Column: Contact Form -->
+<div class="bg-surface-container-lowest p-md md:p-lg rounded-xl shadow-warm border border-outline-variant/30 relative overflow-hidden">
+<!-- Subtle corner decoration -->
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-primary-fixed rounded-full opacity-20 blur-2xl pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md mb-md text-primary">Send a Message</h2>
+<form class="space-y-md relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm md:gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="fullName">Full Name</label>
+<input class="w-full bg-surface text-on-surface border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary focus:ring-1 transition-colors duration-200" id="fullName" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email Address</label>
+<input class="w-full bg-surface text-on-surface border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary focus:ring-1 transition-colors duration-200" id="email" placeholder="jane@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm md:gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="phone">Phone Number</label>
+<input class="w-full bg-surface text-on-surface border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary focus:ring-1 transition-colors duration-200" id="phone" placeholder="(555) 123-4567" type="tel"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="subject">Subject</label>
+<select class="w-full bg-surface text-on-surface border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary focus:ring-1 transition-colors duration-200" id="subject">
+<option>General Question</option>
+<option>Boarding Inquiry</option>
+<option>Lesson Inquiry</option>
+</select>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="message">Message</label>
+<textarea class="w-full bg-surface text-on-surface border-outline-variant rounded-lg focus:border-secondary focus:ring-secondary focus:ring-1 transition-colors duration-200" id="message" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-lg hover:-translate-y-[2px] shadow-warm transition-transform duration-200 flex items-center justify-center gap-2" type="button">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</form>
+</div>
+<!-- Right Column: Contact Details -->
+<div class="flex flex-col gap-lg">
+<!-- Info Card -->
+<div class="bg-surface-container p-md md:p-lg rounded-xl border border-outline-variant/50">
+<h2 class="font-headline-md text-headline-md mb-md text-primary">Contact Details</h2>
+<ul class="space-y-md font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-sm">
+<div class="bg-surface p-2 rounded-full text-secondary flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Address</p>
+<p>123 Bridle Path Lane<br/>Meadowville, ST 12345</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<div class="bg-surface p-2 rounded-full text-secondary flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Phone</p>
+<p>(555) 987-6543</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<div class="bg-surface p-2 rounded-full text-secondary flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background">Email</p>
+<p>hello@horsehaven.com</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Hours Card -->
+<div class="bg-secondary-container/30 p-md md:p-lg rounded-xl border border-secondary/20">
+<h3 class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md mb-sm text-on-secondary-container">Business Hours</h3>
+<div class="space-y-xs font-body-md text-body-md text-on-surface-variant">
+<div class="flex justify-between border-b border-outline-variant/30 py-2">
+<span>Monday - Friday</span>
+<span class="font-label-md">8:00 AM - 6:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 py-2">
+<span>Saturday</span>
+<span class="font-label-md">9:00 AM - 4:00 PM</span>
+</div>
+<div class="flex justify-between py-2">
+<span>Sunday</span>
+<span class="font-label-md">Closed (Boarders Only)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-lg my-lg">
+<div class="bg-surface-container-high rounded-xl max-w-4xl mx-auto p-lg text-center shadow-sm border border-outline-variant/40">
+<div class="inline-flex items-center justify-center p-3 bg-secondary/10 rounded-full text-secondary mb-sm">
+<span class="material-symbols-outlined text-3xl" data-icon="event_available">event_available</span>
+</div>
+<h2 class="font-headline-lg md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-sm">Want to see the stable?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md max-w-xl mx-auto">
+                    We'd love to show you around. Schedule a personal tour of our facilities to meet the team and see where your horse will feel right at home.
+                </p>
+<button class="border-2 border-secondary text-secondary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-secondary hover:text-on-secondary hover:-translate-y-[2px] transition-all duration-200">
+                    Schedule a Tour
+                </button>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-96 bg-surface-variant relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center bg-outline-variant/20">
+<!-- Using a placeholder pattern to simulate map texture without heavy base64 -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(theme('colors.primary') 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="bg-surface p-4 rounded-lg shadow-warm flex items-center gap-sm relative z-10 border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary" data-icon="map">map</span>
+<span class="font-label-md text-label-md text-on-surface" data-location="Meadowville, ST">Google Maps Placeholder</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface-container-high dark:bg-surface-container-highest text-primary dark:text-primary-fixed-dim font-body-md text-body-md w-full rounded-t-xl mt-auto transition-opacity duration-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto">
+<!-- Brand Column -->
+<div class="space-y-4">
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim flex items-center gap-2 hover:opacity-80" href="index.html">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+                    Horse Haven
+                </a>
+<p class="text-on-surface-variant text-sm">Providing a refined, rustic home for horses and riders alike.</p>
+</div>
+<!-- Links Columns -->
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-background mb-2">Navigation</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="boarding.html">Boarding</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="lessons.html">Lessons</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="gallery.html">Gallery</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-background mb-2">Company</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="about.html">About</a>
+<a class="text-primary font-bold hover:opacity-80" href="contact.html">Contact</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-background mb-2">Legal</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- Copyright Bottom Bar -->
+<div class="border-t border-outline-variant/30 py-4 px-margin-mobile md:px-margin-desktop text-center text-sm text-on-surface-variant">
+            © 2024 Horse Haven. All rights reserved.
+        </div>
+</footer>
+</body></html>

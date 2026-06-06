@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Horse Haven</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#111f10",
+                        "surface-container-low": "#fff1e7",
+                        "on-secondary-container": "#576754",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#51443c",
+                        "on-secondary-fixed-variant": "#3b4b39",
+                        "on-secondary": "#ffffff",
+                        "primary": "#6f4627",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#8b5e3c",
+                        "on-primary-container": "#ffe3d1",
+                        "inverse-surface": "#392f25",
+                        "primary-fixed-dim": "#f4bb92",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#baccb4",
+                        "surface-variant": "#f1dfd1",
+                        "surface-container-highest": "#f1dfd1",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#653d1e",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "surface-tint": "#805533",
+                        "tertiary": "#51504c",
+                        "on-primary-fixed": "#301400",
+                        "outline-variant": "#d5c3b8",
+                        "tertiary-fixed": "#e5e2dc",
+                        "surface-bright": "#fff8f4",
+                        "surface-container-high": "#f7e5d7",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "inverse-primary": "#f4bb92",
+                        "background": "#fff8f4",
+                        "surface": "#fff8f4",
+                        "inverse-on-surface": "#ffeee0",
+                        "surface-container": "#fdebdc",
+                        "on-background": "#231a11",
+                        "surface-dim": "#e8d7c9",
+                        "secondary-fixed": "#d6e8d0",
+                        "primary-fixed": "#ffdcc5",
+                        "outline": "#83746b",
+                        "secondary-container": "#d3e5cd",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "on-tertiary-container": "#eae8e2",
+                        "tertiary-container": "#696864",
+                        "secondary": "#536350",
+                        "on-surface": "#231a11"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-md": ["Source Sans 3"],
+                        "body-md": ["Source Sans 3"],
+                        "body-lg": ["Source Sans 3"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .warm-shadow {
+            box-shadow: 0 4px 24px -4px rgba(111, 70, 39, 0.1);
+        }
+        .organic-border {
+            border: 1px solid #d5c3b8;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-container-low font-body-md text-body-md fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto">
+<div class="flex items-center gap-sm">
+<img alt="Horse Haven Logo" class="h-10 w-auto rounded-lg" src="assets/img/img-629adbb3c31c.jpg"/>
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-extrabold tracking-tight hidden md:block">Horse Haven</span>
+</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded-full" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded-full" href="boarding.html">Boarding</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded-full" href="lessons.html">Lessons</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded-full" href="gallery.html">Gallery</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:bg-primary-container/10 px-sm py-xs rounded-full" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded-full" href="contact.html">Contact</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full hover:-translate-y-0.5 transition-transform duration-200 shadow-sm warm-shadow">
+                Contact Us
+            </button>
+<button class="md:hidden text-primary p-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto pb-xl">
+<!-- Header -->
+<header class="pt-xl pb-lg px-margin-mobile md:px-margin-desktop text-center bg-surface-container-low rounded-b-3xl mb-xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-sm">About Horse Haven</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">A sanctuary for horses and a welcoming community for riders of all levels, rooted in a deep love for equestrian life.</p>
+</header>
+<!-- Our Story -->
+<section class="px-margin-mobile md:px-margin-desktop mb-xl">
+<div class="flex flex-col md:flex-row items-center gap-lg">
+<div class="flex-1 space-y-md">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Our Story</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Founded on the principles of compassion and community, Horse Haven began as a humble family stable and has grown into a premier equestrian facility. We believe in nurturing the bond between horse and rider in an environment that feels like home.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Our Refined Rustic approach ensures that while our facilities are modern and professional, the heart of our stable remains warm, approachable, and grounded in the heritage of classic horsemanship.
+                    </p>
+</div>
+<div class="flex-1 w-full">
+<img alt="A beautiful wide shot of the Horse Haven stables at sunrise. Warm, golden hour light bathes the wooden barn and green pastures. The atmosphere is peaceful, rustic, and inviting, perfectly capturing the heart of an equestrian sanctuary." class="w-full h-auto rounded-xl object-cover warm-shadow organic-border aspect-[4/3]" data-alt="A beautiful wide shot of the Horse Haven stables at sunrise. Warm, golden hour light bathes the wooden barn and green pastures. The atmosphere is peaceful, rustic, and inviting, perfectly capturing the heart of an equestrian sanctuary in a modern organic aesthetic." src="assets/img/img-92d8ef0f66f8.jpg"/>
+</div>
+</div>
+</section>
+<!-- Mission & Values -->
+<section class="px-margin-mobile md:px-margin-desktop mb-xl">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center text-primary mb-lg">Our Core Values</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Value Card 1 -->
+<div class="bg-surface-container-lowest p-md rounded-xl organic-border warm-shadow text-center hover:-translate-y-1 transition-transform duration-300">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-container text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Horse Welfare</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The health, happiness, and natural well-being of our horses are our highest priorities.</p>
+</div>
+<!-- Value Card 2 -->
+<div class="bg-surface-container-lowest p-md rounded-xl organic-border warm-shadow text-center hover:-translate-y-1 transition-transform duration-300">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-container text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Family Community</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fostering a supportive, inclusive, and welcoming environment for riders and their families.</p>
+</div>
+<!-- Value Card 3 -->
+<div class="bg-surface-container-lowest p-md rounded-xl organic-border warm-shadow text-center hover:-translate-y-1 transition-transform duration-300">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-container text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Rider Growth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Providing patient, professional instruction to help riders achieve their personal goals.</p>
+</div>
+<!-- Value Card 4 -->
+<div class="bg-surface-container-lowest p-md rounded-xl organic-border warm-shadow text-center hover:-translate-y-1 transition-transform duration-300">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-container text-secondary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Safety First</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Maintaining rigorous safety standards across all our facilities and training programs.</p>
+</div>
+</div>
+</section>
+<!-- Meet the Team -->
+<section class="px-margin-mobile md:px-margin-desktop mb-xl bg-surface-container-high py-lg rounded-3xl organic-border">
+<div class="text-center mb-lg max-w-2xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-sm">The Hearts Behind the Haven</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Meet the dedicated professionals who make Horse Haven a truly special place.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter px-md">
+<!-- Bio Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden organic-border warm-shadow flex flex-col group">
+<div class="aspect-square overflow-hidden">
+<img alt="Sarah Mitchell - Owner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/img/img-4adc7383b83e.jpg"/>
+</div>
+<div class="p-md flex-1 bg-surface-container-lowest">
+<h3 class="font-headline-md text-headline-md text-on-surface">Sarah Mitchell</h3>
+<p class="font-label-md text-label-md text-secondary mb-sm uppercase tracking-wider">Owner &amp; Founder</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Sarah's lifelong passion for horses inspired her to create a sanctuary that feels like home.</p>
+</div>
+</div>
+<!-- Bio Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden organic-border warm-shadow flex flex-col group">
+<div class="aspect-square overflow-hidden">
+<img alt="Elena Rodriguez - Head Trainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/img/img-147afd121054.jpg"/>
+</div>
+<div class="p-md flex-1 bg-surface-container-lowest">
+<h3 class="font-headline-md text-headline-md text-on-surface">Elena Rodriguez</h3>
+<p class="font-label-md text-label-md text-secondary mb-sm uppercase tracking-wider">Head Trainer</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">With 15 years of competitive experience, Elena brings patience and expertise to every lesson.</p>
+</div>
+</div>
+<!-- Bio Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden organic-border warm-shadow flex flex-col group">
+<div class="aspect-square overflow-hidden">
+<img alt="Mark Henderson - Barn Manager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/img/img-655cc666ae83.jpg"/>
+</div>
+<div class="p-md flex-1 bg-surface-container-lowest">
+<h3 class="font-headline-md text-headline-md text-on-surface">Mark Henderson</h3>
+<p class="font-label-md text-label-md text-secondary mb-sm uppercase tracking-wider">Barn Manager</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Mark ensures the daily operations run smoothly, keeping our equine residents happy and healthy.</p>
+</div>
+</div>
+<!-- Bio Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden organic-border warm-shadow flex flex-col group">
+<div class="aspect-square overflow-hidden">
+<img alt="Jamie Chen - Stable Hand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/img/img-e606af43bfdf.jpg"/>
+</div>
+<div class="p-md flex-1 bg-surface-container-lowest">
+<h3 class="font-headline-md text-headline-md text-on-surface">Jamie Chen</h3>
+<p class="font-label-md text-label-md text-secondary mb-sm uppercase tracking-wider">Stable Hand</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Jamie's gentle demeanor and hard work make them a favorite among both horses and boarders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Facility & Location -->
+<section class="px-margin-mobile md:px-margin-desktop mb-xl">
+<div class="flex flex-col lg:flex-row gap-lg bg-surface-container p-md md:p-lg rounded-3xl organic-border warm-shadow items-center">
+<div class="flex-1 space-y-md">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Our Facility</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Nestled in the serene Meadowbrook Valley, our property spans 50 acres of lush, rolling pastures. Our modern, well-ventilated stalls are designed with equine comfort in mind. We feature large indoor and outdoor arenas, providing year-round riding opportunities in a tranquil, natural setting.
+                    </p>
+<div class="flex items-start gap-sm mt-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Visit Us</p>
+<p class="font-body-md text-body-md text-on-surface-variant">123 Equestrian Lane, Meadowbrook Valley</p>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full h-[300px] lg:h-[400px] bg-surface-variant rounded-xl organic-border overflow-hidden relative">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 flex items-center justify-center text-on-surface-variant/50 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=Meadowbrook+Valley&amp;zoom=13&amp;size=600x400&amp;maptype=roadmap&amp;markers=color:0x6f4627%7Clabel:H%7C123+Equestrian+Lane&amp;key=YOUR_API_KEY')] bg-cover bg-center opacity-80" data-alt="A stylized map view showing the rural location of Meadowbrook Valley with warm earth tones. Soft greens and muted browns highlight the landscape, giving a rustic yet refined aesthetic." data-location="Meadowbrook Valley" style="">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">map</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Call-to-Action -->
+<section class="px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container text-on-primary-container rounded-3xl p-xl text-center shadow-lg relative overflow-hidden">
+<!-- Decorative subtle pattern overlay -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent mix-blend-overlay pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-md">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Come Experience the Haven</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/90">
+                        Whether you're looking for a new home for your horse or wanting to start your riding journey, we'd love to show you around.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-sm mt-md">
+<button class="bg-surface text-primary font-label-md text-label-md px-lg py-sm rounded-full hover:bg-surface-bright hover:-translate-y-0.5 transition-all duration-200 shadow-sm">
+                            Book a Tour
+                        </button>
+<button class="bg-transparent border-2 border-on-primary-container text-on-primary-container font-label-md text-label-md px-lg py-sm rounded-full hover:bg-on-primary-container/10 transition-colors duration-200">
+                            Contact Our Team
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-surface-container-highest font-body-md text-body-md w-full rounded-t-xl bg-surface-container-high flat no shadows mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-sm mb-sm">
+<img alt="Horse Haven Logo" class="h-8 w-auto rounded opacity-80" src="assets/img/img-629adbb3c31c.jpg"/>
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-bold">Horse Haven</span>
+</div>
+<p class="text-on-surface-variant opacity-80">A Refined Rustic sanctuary for horses and riders alike.</p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface mb-xs uppercase tracking-wide">Navigation</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="boarding.html">Boarding</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="lessons.html">Lessons</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="gallery.html">Gallery</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface mb-xs uppercase tracking-wide">Company</h4>
+<a class="text-primary font-bold hover:opacity-80" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="contact.html">Contact</a>
+</div>
+<!-- Links Column 3 -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface mb-xs uppercase tracking-wide">Legal</h4>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- Copyright Bottom -->
+<div class="border-t border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-md text-center">
+<p class="text-on-surface-variant text-sm">© 2024 Horse Haven. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
