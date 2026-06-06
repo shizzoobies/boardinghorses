@@ -45,3 +45,5 @@ stitch_*.json
 .playwright-mcp/
 review-*.jpeg
 review-*.png
+rev-*.jpeg
+rev-*.png

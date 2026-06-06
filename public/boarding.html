@@ -1,434 +1,190 @@
 <!DOCTYPE html>
-
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<link rel="icon" type="image/jpeg" href="assets/logo.jpg"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Boarding - Horse Haven</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-variant": "#f1dfd1",
-                    "inverse-primary": "#f4bb92",
-                    "tertiary-fixed-dim": "#c9c6c1",
-                    "surface-container": "#fdebdc",
-                    "on-surface": "#231a11",
-                    "tertiary-container": "#696864",
-                    "surface-container-lowest": "#ffffff",
-                    "on-surface-variant": "#51443c",
-                    "on-primary-container": "#ffe3d1",
-                    "outline-variant": "#d5c3b8",
-                    "error-container": "#ffdad6",
-                    "on-tertiary-container": "#eae8e2",
-                    "secondary-fixed-dim": "#baccb4",
-                    "inverse-on-surface": "#ffeee0",
-                    "surface-container-low": "#fff1e7",
-                    "on-secondary": "#ffffff",
-                    "outline": "#83746b",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-container": "#576754",
-                    "error": "#ba1a1a",
-                    "on-secondary-fixed": "#111f10",
-                    "on-primary-fixed-variant": "#653d1e",
-                    "surface": "#fff8f4",
-                    "on-secondary-fixed-variant": "#3b4b39",
-                    "tertiary": "#51504c",
-                    "on-primary-fixed": "#301400",
-                    "inverse-surface": "#392f25",
-                    "surface-container-high": "#f7e5d7",
-                    "primary": "#6f4627",
-                    "surface-dim": "#e8d7c9",
-                    "surface-container-highest": "#f1dfd1",
-                    "surface-bright": "#fff8f4",
-                    "on-background": "#231a11",
-                    "tertiary-fixed": "#e5e2dc",
-                    "secondary": "#536350",
-                    "background": "#fff8f4",
-                    "secondary-container": "#d3e5cd",
-                    "on-primary": "#ffffff",
-                    "on-tertiary-fixed-variant": "#474743",
-                    "secondary-fixed": "#d6e8d0",
-                    "primary-fixed": "#ffdcc5",
-                    "on-error": "#ffffff",
-                    "on-tertiary-fixed": "#1c1c18",
-                    "primary-fixed-dim": "#f4bb92",
-                    "primary-container": "#8b5e3c",
-                    "surface-tint": "#805533",
-                    "on-error-container": "#93000a"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "xl": "80px",
-                    "gutter": "24px",
-                    "base": "8px",
-                    "xs": "4px",
-                    "md": "24px",
-                    "sm": "12px",
-                    "margin-mobile": "16px",
-                    "lg": "48px",
-                    "margin-desktop": "64px"
-            },
-            "fontFamily": {
-                    "headline-md": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "headline-lg-mobile": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "headline-lg": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "label-md": [
-                            "Source Sans 3"
-                    ],
-                    "display-lg": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "body-md": [
-                            "Source Sans 3"
-                    ],
-                    "body-lg": [
-                            "Source Sans 3"
-                    ]
-            },
-            "fontSize": {
-                    "headline-md": [
-                            "24px",
-                            {
-                                    "lineHeight": "32px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "headline-lg-mobile": [
-                            "28px",
-                            {
-                                    "lineHeight": "36px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "headline-lg": [
-                            "32px",
-                            {
-                                    "lineHeight": "40px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "label-md": [
-                            "14px",
-                            {
-                                    "lineHeight": "20px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "display-lg": [
-                            "48px",
-                            {
-                                    "lineHeight": "56px",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "24px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "body-lg": [
-                            "18px",
-                            {
-                                    "lineHeight": "28px",
-                                    "fontWeight": "400"
-                            }
-                    ]
-            }
-        },
-        },
-      }
-    </script>
-<style>
-        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
-        .ambient-shadow { box-shadow: 0 8px 32px -4px rgba(111, 70, 39, 0.1); }
-        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
-    </style>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Boarding — Horse Haven</title>
+<meta name="description" content="Full-care, pasture, and partial boarding at Horse Haven — spacious stalls, daily turnout, arenas, and attentive care in a calm countryside setting." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..560;1,9..144,300..500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
-<body class="font-body-md text-body-md antialiased flex flex-col min-h-screen">
-<!-- TopNavBar Component -->
-<header class="bg-surface dark:bg-surface-container-low font-body-md text-body-md fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center px-margin-desktop py-base max-w-7xl mx-auto md:px-margin-mobile">
-<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Horse Haven</div>
-<nav class="hidden md:flex gap-gutter">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded" href="index.html">Home</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:bg-primary-container/10 px-sm py-xs rounded" href="boarding.html">Boarding</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded" href="lessons.html">Lessons</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded" href="gallery.html">Gallery</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded" href="about.html">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-sm py-xs rounded" href="contact.html">Contact</a>
-</nav>
-<button class="hidden md:block bg-primary text-on-primary px-md py-sm rounded-lg hover:-translate-y-0.5 transition-transform shadow-sm">Contact Us</button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
-</div>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img class="mark" src="assets/logo.jpg" alt="" /> Horse Haven</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav" aria-label="Primary">
+    <a class="link-underline" href="index.html">Home</a>
+    <a class="link-underline" href="boarding.html">Boarding</a>
+    <a class="link-underline" href="lessons.html">Lessons</a>
+    <a class="link-underline" href="gallery.html">Gallery</a>
+    <a class="link-underline" href="about.html">About</a>
+    <a class="cta" href="contact.html">Plan a Visit</a>
+  </nav>
 </header>
-<main class="flex-grow pt-[80px]">
-<!-- 1. Hero Section -->
-<section class="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center">
-<img alt="Placeholder image of horses in a pasture" class="absolute inset-0 w-full h-full object-cover rounded-none" src="assets/img/img-551b5e7b3b05.jpg"/>
-<div class="absolute inset-0 bg-black/30"></div>
-<div class="relative z-10 text-center text-white px-margin-mobile max-w-3xl glass-panel p-lg rounded-xl">
-<h1 class="font-display-lg text-display-lg mb-sm text-primary-fixed">Boarding at Horse Haven</h1>
-<p class="font-body-lg text-body-lg text-white/90">Providing a safe, comfortable, and loving home for horses in a refined, natural setting.</p>
-</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero__media"><img src="assets/img/img-92d8ef0f66f8.jpg" alt="Horse Haven stables at golden-hour sunrise" /></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow reveal" style="color:#d8d0bd">Boarding</p>
+    <h1 class="reveal" data-delay="1">A calm, well-kept home for your horse.</h1>
+    <p class="lead reveal" data-delay="2">Spacious stalls, lush turnout, and attentive daily care — the peace of mind of knowing your horse is truly looked after.</p>
+  </div>
 </section>
-<!-- 2. Boarding Options (Cards) -->
-<section class="max-w-7xl mx-auto px-margin-desktop md:px-margin-mobile py-xl">
-<div class="text-center mb-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Boarding Options</h2>
-<p class="text-on-surface-variant">Find the perfect fit for your horse's needs.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Card 1 -->
-<div class="bg-surface-container rounded-xl overflow-hidden ambient-shadow border border-outline-variant flex flex-col">
-<img alt="Placeholder image of an indoor horse stall" class="h-48 w-full object-cover" src="assets/img/img-65c8f8187f40.jpg"/>
-<div class="p-md flex-grow flex flex-col">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Full-Care Stall Board</h3>
-<p class="text-primary font-bold text-lg mb-sm">From $850/mo</p>
-<ul class="text-on-surface-variant space-y-sm flex-grow">
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Daily turnout</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> 2x grain/hay</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Stall cleaning</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Fresh shavings</li>
-</ul>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface-container rounded-xl overflow-hidden ambient-shadow border border-outline-variant flex flex-col">
-<img alt="Placeholder image of horses in an outdoor pasture" class="h-48 w-full object-cover" src="assets/img/img-551b5e7b3b05.jpg"/>
-<div class="p-md flex-grow flex flex-col">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Pasture Board</h3>
-<p class="text-primary font-bold text-lg mb-sm">From $450/mo</p>
-<ul class="text-on-surface-variant space-y-sm flex-grow">
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> 24/7 turnout</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Run-in shelter</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> 1x grain, unlimited hay</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Heated waterers</li>
-</ul>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface-container rounded-xl overflow-hidden ambient-shadow border border-outline-variant flex flex-col">
-<img alt="Placeholder image of a tack room" class="h-48 w-full object-cover" src="assets/img/img-59f0cf964e34.jpg"/>
-<div class="p-md flex-grow flex flex-col">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Partial Board</h3>
-<p class="text-primary font-bold text-lg mb-sm">From $650/mo</p>
-<ul class="text-on-surface-variant space-y-sm flex-grow">
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Stall included</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Owner provides grain/shavings</li>
-<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Staff feeds/turns out</li>
-</ul>
-</div>
-</div>
-</div>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container page-intro">
+    <p class="eyebrow reveal">The experience</p>
+    <p class="lead reveal" data-delay="1">Every horse arrives with its own routine, and we keep it. Quiet barns, clean bedding, fresh water, and turnout that lets a horse simply be a horse — watched over from <em>dawn to dusk</em>.</p>
+  </div>
 </section>
-<!-- 3. Amenities (Icon Grid) -->
-<section class="bg-surface-container-low py-xl">
-<div class="max-w-7xl mx-auto px-margin-desktop md:px-margin-mobile">
-<div class="text-center mb-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Facility Amenities</h2>
-<p class="text-on-surface-variant">Everything you and your horse need.</p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-lg">
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="stadium">stadium</span></div>
-<span class="font-label-md text-label-md">Indoor Arena</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="landscape">landscape</span></div>
-<span class="font-label-md text-label-md">Outdoor Arena</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="water_drop">water_drop</span></div>
-<span class="font-label-md text-label-md">Wash Stalls</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="thermostat">thermostat</span></div>
-<span class="font-label-md text-label-md">Heated Barn</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="route">route</span></div>
-<span class="font-label-md text-label-md">Trails</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="grass">grass</span></div>
-<span class="font-label-md text-label-md">Turnout Paddocks</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="lock">lock</span></div>
-<span class="font-label-md text-label-md">Tack Lockers</span>
-</div>
-<div class="flex flex-col items-center text-center gap-sm">
-<div class="bg-secondary-container text-on-secondary-container p-md rounded-full"><span class="material-symbols-outlined text-[32px]" data-icon="eco">eco</span></div>
-<span class="font-label-md text-label-md">Hay/Feed Included</span>
-</div>
-</div>
-</div>
+
+<!-- BOARD OPTIONS -->
+<section class="section section--alt">
+  <div class="container">
+    <p class="eyebrow reveal" style="margin-bottom:0.6rem;">Board options</p>
+    <h2 class="reveal" style="margin-bottom:clamp(2.5rem,5vw,4rem);">Three ways to stay.</h2>
+    <div class="rows">
+
+      <div class="split feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-65c8f8187f40.jpg" alt="A clean indoor box stall with wooden walls" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">01 — Full-Care Stall Board</span>
+          <h3>Full-care stall board</h3>
+          <p class="measure">Your horse's own roomy box stall with complete daily care — stall cleaning, feeding to your plan, turnout, and blanketing. The hands-off option for busy owners.</p>
+          <ul class="spec">
+            <li><span class="k">Private box stall</span><span class="v">Bedded daily</span></li>
+            <li><span class="k">Feeding to your plan</span><span class="v">2–3× daily</span></li>
+            <li><span class="k">Daily turnout &amp; blanketing</span><span class="v">Included</span></li>
+            <li><span class="k">From</span><span class="v">$850 / month</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Reserve a stall <span class="arw">→</span></a>
+        </div>
+      </div>
+
+      <div class="split split--media-right feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-551b5e7b3b05.jpg" alt="Horses grazing together in an open pasture" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">02 — Pasture Board</span>
+          <h3>Pasture board</h3>
+          <p class="measure">Group turnout on lush, well-fenced pasture with run-in shelter, for the horse who thrives outdoors. Natural, social, and easy on the budget.</p>
+          <ul class="spec">
+            <li><span class="k">Lush group pasture</span><span class="v">24/7 turnout</span></li>
+            <li><span class="k">Run-in shelter</span><span class="v">Always open</span></li>
+            <li><span class="k">Hay &amp; fresh water</span><span class="v">Included</span></li>
+            <li><span class="k">From</span><span class="v">$450 / month</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Reserve a spot <span class="arw">→</span></a>
+        </div>
+      </div>
+
+      <div class="split feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-0283ea3bc282.jpg" alt="A horse resting in a sunlit stall" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">03 — Partial Board</span>
+          <h3>Partial board</h3>
+          <p class="measure">A shared-care middle ground: your horse gets a stall and the essentials, while you handle some of the daily chores. A great fit for hands-on owners.</p>
+          <ul class="spec">
+            <li><span class="k">Box stall</span><span class="v">Owner-assisted</span></li>
+            <li><span class="k">Turnout &amp; feeding</span><span class="v">Shared</span></li>
+            <li><span class="k">Arena &amp; trail access</span><span class="v">Included</span></li>
+            <li><span class="k">From</span><span class="v">$650 / month</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Ask about partial board <span class="arw">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
-<!-- 4. Pricing Table -->
-<section class="max-w-7xl mx-auto px-margin-desktop md:px-margin-mobile py-xl">
-<div class="text-center mb-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Compare Plans</h2>
-</div>
-<div class="overflow-x-auto rounded-xl border border-outline-variant ambient-shadow">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-high border-b border-outline-variant">
-<th class="p-md font-label-md text-label-md text-on-surface">Features</th>
-<th class="p-md font-label-md text-label-md text-on-surface">Full-Care</th>
-<th class="p-md font-label-md text-label-md text-on-surface">Partial</th>
-<th class="p-md font-label-md text-label-md text-on-surface">Pasture</th>
-</tr>
-</thead>
-<tbody class="bg-surface">
-<tr class="border-b border-outline-variant/50">
-<td class="p-md text-on-surface-variant">Stall Access</td>
-<td class="p-md"><span class="material-symbols-outlined text-secondary" data-icon="check">check</span></td>
-<td class="p-md"><span class="material-symbols-outlined text-secondary" data-icon="check">check</span></td>
-<td class="p-md text-tertiary-fixed-dim">-</td>
-</tr>
-<tr class="border-b border-outline-variant/50">
-<td class="p-md text-on-surface-variant">Daily Turnout</td>
-<td class="p-md"><span class="material-symbols-outlined text-secondary" data-icon="check">check</span></td>
-<td class="p-md"><span class="material-symbols-outlined text-secondary" data-icon="check">check</span></td>
-<td class="p-md">24/7</td>
-</tr>
-<tr class="border-b border-outline-variant/50">
-<td class="p-md text-on-surface-variant">Feed Included</td>
-<td class="p-md"><span class="material-symbols-outlined text-secondary" data-icon="check">check</span></td>
-<td class="p-md text-tertiary-fixed-dim">-</td>
-<td class="p-md"><span class="material-symbols-outlined text-secondary" data-icon="check">check</span> (Hay only)</td>
-</tr>
-<tr>
-<td class="p-md text-on-surface-variant font-bold">Base Price</td>
-<td class="p-md font-bold text-primary">$850</td>
-<td class="p-md font-bold text-primary">$650</td>
-<td class="p-md font-bold text-primary">$450</td>
-</tr>
-</tbody>
-</table>
-</div>
+
+<!-- AMENITIES -->
+<section class="section">
+  <div class="container">
+    <div class="page-intro" style="margin-bottom:clamp(2.5rem,5vw,3.5rem);">
+      <p class="eyebrow reveal">Amenities</p>
+      <h2 class="reveal" data-delay="1">Everything on-site.</h2>
+    </div>
+    <ul class="cols-list reveal">
+      <li>Floodlit indoor arena</li>
+      <li>Full-size outdoor arena</li>
+      <li>Heated, well-ventilated barn</li>
+      <li>Hot &amp; cold wash stalls</li>
+      <li>Individual turnout paddocks</li>
+      <li>Miles of wooded trails</li>
+      <li>Climate-controlled tack lockers</li>
+      <li>Quality hay &amp; feed included</li>
+      <li>On-site manager &amp; daily checks</li>
+      <li>Trailer parking</li>
+    </ul>
+  </div>
 </section>
-<!-- 5. Gallery Strip -->
-<section class="py-xl bg-surface-container-low overflow-hidden">
-<div class="px-margin-desktop md:px-margin-mobile mb-md">
-<h2 class="font-headline-lg text-headline-lg text-primary">Facility Highlights</h2>
-</div>
-<div class="flex gap-gutter overflow-x-auto pb-sm px-margin-desktop md:px-margin-mobile snap-x scrollbar-hide">
-<img alt="Placeholder image of a horse stall" class="h-64 w-96 object-cover rounded-xl snap-center shrink-0 ambient-shadow border border-outline-variant" src="assets/img/img-65c8f8187f40.jpg"/>
-<img alt="Placeholder image of horses in pasture" class="h-64 w-96 object-cover rounded-xl snap-center shrink-0 ambient-shadow border border-outline-variant" src="assets/img/img-551b5e7b3b05.jpg"/>
-<img alt="Placeholder image of a tack room" class="h-64 w-96 object-cover rounded-xl snap-center shrink-0 ambient-shadow border border-outline-variant" src="assets/img/img-59f0cf964e34.jpg"/>
-</div>
+
+<!-- PRICING -->
+<section class="section section--alt">
+  <div class="container">
+    <p class="eyebrow reveal" style="margin-bottom:0.6rem;">At a glance</p>
+    <h2 class="reveal" style="margin-bottom:2.5rem;">Compare boarding plans.</h2>
+    <table class="ptable reveal">
+      <thead>
+        <tr><th>Included</th><th class="num">Pasture</th><th class="num">Partial</th><th class="num">Full-care</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="plan">Private stall</td><td class="num">—</td><td class="num">Yes</td><td class="num">Yes</td></tr>
+        <tr><td class="plan">Daily stall cleaning</td><td class="num">—</td><td class="num">Shared</td><td class="num">Yes</td></tr>
+        <tr><td class="plan">Turnout</td><td class="num">24/7</td><td class="num">Daily</td><td class="num">Daily</td></tr>
+        <tr><td class="plan">Feeding to plan</td><td class="num">Hay</td><td class="num">Shared</td><td class="num">2–3×</td></tr>
+        <tr><td class="plan">Arena &amp; trail access</td><td class="num">Yes</td><td class="num">Yes</td><td class="num">Yes</td></tr>
+        <tr><td class="plan">From / month</td><td class="num">$450</td><td class="num">$650</td><td class="num">$850</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
-<!-- 6. FAQ Accordion -->
-<section class="max-w-4xl mx-auto px-margin-desktop md:px-margin-mobile py-xl">
-<div class="text-center mb-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Frequently Asked Questions</h2>
-</div>
-<div class="space-y-sm">
-<!-- FAQ Item 1 -->
-<details class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden group cursor-pointer ambient-shadow">
-<summary class="p-md font-label-md text-label-md text-on-surface flex justify-between items-center bg-surface-container-high/50 group-open:bg-primary-container/10 transition-colors">
-                        What vaccinations are required?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="p-md text-on-surface-variant bg-surface-container">
-                        Rabies, Coggins, Flu/Rhino, and Strangles.
-                    </div>
-</details>
-<!-- FAQ Item 2 -->
-<details class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden group cursor-pointer ambient-shadow">
-<summary class="p-md font-label-md text-label-md text-on-surface flex justify-between items-center bg-surface-container-high/50 group-open:bg-primary-container/10 transition-colors">
-                        What is the feeding schedule?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="p-md text-on-surface-variant bg-surface-container">
-                        Grain 2x daily, Hay 3x or free choice depending on the plan.
-                    </div>
-</details>
-<!-- FAQ Item 3 -->
-<details class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden group cursor-pointer ambient-shadow">
-<summary class="p-md font-label-md text-label-md text-on-surface flex justify-between items-center bg-surface-container-high/50 group-open:bg-primary-container/10 transition-colors">
-                        How often do horses get turned out?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="p-md text-on-surface-variant bg-surface-container">
-                        Daily, weather permitting, or 24/7 for pasture boarders.
-                    </div>
-</details>
-<!-- FAQ Item 4 -->
-<details class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden group cursor-pointer ambient-shadow">
-<summary class="p-md font-label-md text-label-md text-on-surface flex justify-between items-center bg-surface-container-high/50 group-open:bg-primary-container/10 transition-colors">
-                        What are the visiting hours?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="p-md text-on-surface-variant bg-surface-container">
-                        6am - 9pm daily.
-                    </div>
-</details>
-</div>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="page-intro" style="margin-bottom:clamp(2rem,4vw,3rem);">
+      <p class="eyebrow reveal">Good to know</p>
+      <h2 class="reveal" data-delay="1">Boarding questions, answered.</h2>
+    </div>
+    <div class="accordion reveal">
+      <details class="acc"><summary>What are the vaccination &amp; health requirements?<span class="pm">+</span></summary><div class="acc__body">All boarded horses need current core vaccinations, a negative annual Coggins test, and a regular farrier and deworming schedule. We're happy to share our recommended schedule before move-in.</div></details>
+      <details class="acc"><summary>What is the feeding schedule?<span class="pm">+</span></summary><div class="acc__body">Full-care horses are fed two to three times daily on a plan you set with us. We can accommodate special diets, supplements, and senior feeds at no extra fuss.</div></details>
+      <details class="acc"><summary>How does turnout work?<span class="pm">+</span></summary><div class="acc__body">Stall-boarded horses get daily individual or small-group turnout, weather permitting. Pasture-boarded horses live out full time with run-in shelter and herd mates suited to their temperament.</div></details>
+      <details class="acc"><summary>What are the visiting hours?<span class="pm">+</span></summary><div class="acc__body">Boarders are welcome daily from 7am to 9pm. The barn is staffed during the day, and there's always someone on call.</div></details>
+    </div>
+  </div>
 </section>
-<!-- 7. CTA -->
-<section class="text-center py-xl bg-surface-container-low mb-xl rounded-xl mx-margin-desktop md:mx-margin-mobile">
-<h2 class="font-headline-md text-headline-md text-primary mb-md">Ready to join the family?</h2>
-<div class="flex gap-md justify-center items-center flex-col md:flex-row">
-<button class="bg-primary text-on-primary px-lg py-sm rounded-lg hover:-translate-y-0.5 transition-transform shadow-sm font-label-md text-label-md w-full md:w-auto">Schedule a Tour</button>
-<a class="text-primary font-label-md text-label-md hover:underline decoration-2 underline-offset-4" href="contact.html">Contact Us</a>
-</div>
+
+<!-- CLOSING INVITE -->
+<section class="invite">
+  <div class="invite__media"><img src="assets/img/img-2f703ce0c0e3.jpg" alt="" /></div>
+  <div class="container invite__inner">
+    <h2 class="reveal">Come see the barn.</h2>
+    <p class="reveal" data-delay="1">Tour the stalls and pastures, meet the team, and find the right fit for your horse.</p>
+    <a class="link-arrow reveal" data-delay="2" href="contact.html">Schedule a tour <span class="arw">→</span></a>
+  </div>
 </section>
-</main>
-<!-- Footer Component -->
-<footer class="bg-surface-container-high dark:bg-surface-container-highest font-body-md text-body-md w-full rounded-t-xl transition-opacity duration-200">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto md:px-margin-mobile">
-<div>
-<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-md">Horse Haven</div>
-<p class="text-on-surface-variant text-sm mb-sm">© 2024 Horse Haven. All rights reserved.</p>
-</div>
-<div class="flex flex-col gap-sm">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="index.html">Home</a>
-<a class="text-primary font-bold hover:opacity-80" href="boarding.html">Boarding</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="lessons.html">Lessons</a>
-</div>
-<div class="flex flex-col gap-sm">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="gallery.html">Gallery</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="about.html">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="contact.html">Contact</a>
-</div>
-<div class="flex flex-col gap-sm">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:opacity-80" href="#">Terms of Service</a>
-</div>
-</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><span class="brand">Horse Haven</span><p class="footer-about">Exceptional equine care and patient instruction, in a warm and family-friendly countryside setting.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="boarding.html">Boarding</a></li><li><a href="lessons.html">Lessons &amp; Training</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li><a href="contact.html">Plan a visit</a></li><li><a href="contact.html">Contact us</a></li><li><p>Mon–Sat · 8am–6pm</p></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a class="link-underline" href="tel:+15555550123">(555) 555-0123</a></li><li><a class="link-underline" href="mailto:hello@horsehaven.com">hello@horsehaven.com</a></li><li><p>123 Meadow Lane, Countryside</p></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Horse Haven. All rights reserved.</span><span>Boarding &amp; Riding Lessons</span></div>
+  </div>
 </footer>
-<style>
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-</body></html>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

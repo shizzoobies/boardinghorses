@@ -1,283 +1,208 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<link rel="icon" type="image/jpeg" href="assets/logo.jpg"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lessons &amp; Training - Horse Haven</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-family: 'Material Symbols Outlined';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            line-height: 1;
-            letter-spacing: normal;
-            text-transform: none;
-            display: inline-block;
-            white-space: nowrap;
-            word-wrap: normal;
-            direction: ltr;
-            -webkit-font-feature-settings: 'liga';
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        /* Ambient Warm Shadow */
-        .shadow-warm {
-            box-shadow: 0 10px 30px -10px rgba(111, 70, 39, 0.15);
-        }
-        .shadow-warm-hover:hover {
-            box-shadow: 0 20px 40px -15px rgba(111, 70, 39, 0.2);
-            transform: translateY(-2px);
-        }
-    </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-surface": "#392f25",
-                        "error-container": "#ffdad6",
-                        "surface-variant": "#f1dfd1",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-container": "#576754",
-                        "surface-container-low": "#fff1e7",
-                        "tertiary-fixed": "#e5e2dc",
-                        "tertiary-container": "#696864",
-                        "primary-fixed-dim": "#f4bb92",
-                        "on-tertiary-fixed-variant": "#474743",
-                        "secondary": "#536350",
-                        "primary-fixed": "#ffdcc5",
-                        "on-background": "#231a11",
-                        "on-secondary-fixed-variant": "#3b4b39",
-                        "on-tertiary-container": "#eae8e2",
-                        "surface-container-high": "#f7e5d7",
-                        "secondary-fixed": "#d6e8d0",
-                        "primary": "#6f4627",
-                        "secondary-fixed-dim": "#baccb4",
-                        "secondary-container": "#d3e5cd",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-fixed": "#1c1c18",
-                        "primary-container": "#8b5e3c",
-                        "on-secondary-fixed": "#111f10",
-                        "on-primary": "#ffffff",
-                        "on-surface-variant": "#51443c",
-                        "on-primary-fixed-variant": "#653d1e",
-                        "inverse-on-surface": "#ffeee0",
-                        "background": "#fff8f4",
-                        "on-error": "#ffffff",
-                        "error": "#ba1a1a",
-                        "on-secondary": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "on-primary-container": "#ffe3d1",
-                        "outline-variant": "#d5c3b8",
-                        "surface-container-highest": "#f1dfd1",
-                        "on-surface": "#231a11",
-                        "surface-container": "#fdebdc",
-                        "on-primary-fixed": "#301400",
-                        "tertiary-fixed-dim": "#c9c6c1",
-                        "tertiary": "#51504c",
-                        "surface-bright": "#fff8f4",
-                        "outline": "#83746b",
-                        "surface": "#fff8f4",
-                        "inverse-primary": "#f4bb92",
-                        "surface-dim": "#e8d7c9",
-                        "surface-tint": "#805533"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px",
-                        "2xl": "1rem",
-                        "3xl": "1.5rem"
-                    },
-                    "spacing": {
-                        "margin-mobile": "16px",
-                        "xl": "80px",
-                        "xs": "4px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "sm": "12px",
-                        "lg": "48px",
-                        "base": "8px",
-                        "md": "24px"
-                    },
-                    "fontFamily": {
-                        "body-lg": ["Source Sans 3"],
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "display-lg": ["Plus Jakarta Sans"],
-                        "label-md": ["Source Sans 3"],
-                        "headline-lg-mobile": ["Plus Jakarta Sans"],
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Source Sans 3"]
-                    },
-                    "fontSize": {
-                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
-                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-                    }
-                }
-            }
-        }
-    </script>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lessons &amp; Training — Horse Haven</title>
+<meta name="description" content="Patient riding lessons and training for all ages and levels at Horse Haven — private and group lessons, beginner intros, and summer camps with certified instructors." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..560;1,9..144,300..500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
-<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- Navigation Shell (TopNavBar) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm">
-<div class="flex justify-between items-center px-margin-desktop max-md:px-margin-mobile py-4 max-w-7xl mx-auto">
-<a class="font-headline-md text-headline-md text-primary tracking-tight" href="index.html">Horse Haven</a>
-<div class="hidden md:flex gap-md items-center">
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="boarding.html">Boarding</a>
-<a class="text-primary border-b-2 border-primary pb-1" href="lessons.html">Lessons</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="gallery.html">Gallery</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="about.html">About</a>
-</div>
-<div class="hidden md:flex">
-<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:bg-primary-container transition-colors shadow-warm">
-                    Contact Us
-                </button>
-</div>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<main class="pt-[100px] pb-xl">
-<!-- Header Section -->
-<header class="max-w-7xl mx-auto px-margin-desktop max-md:px-margin-mobile py-lg text-center">
-<h1 class="font-display-lg text-display-lg text-primary mb-md max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile">Lessons &amp; Training</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                Find your stride at Horse Haven. Whether you're taking the reins for the first time or looking to refine advanced techniques, our expert instructors and gentle horses provide the perfect environment for growth and connection.
-            </p>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img class="mark" src="assets/logo.jpg" alt="" /> Horse Haven</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav" aria-label="Primary">
+    <a class="link-underline" href="index.html">Home</a>
+    <a class="link-underline" href="boarding.html">Boarding</a>
+    <a class="link-underline" href="lessons.html">Lessons</a>
+    <a class="link-underline" href="gallery.html">Gallery</a>
+    <a class="link-underline" href="about.html">About</a>
+    <a class="cta" href="contact.html">Plan a Visit</a>
+  </nav>
 </header>
-<!-- Lesson Programs (Bento Grid) -->
-<section class="max-w-7xl mx-auto px-margin-desktop max-md:px-margin-mobile py-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-md text-center max-md:font-headline-md max-md:text-headline-md">Lesson Programs</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Private Lessons -->
-<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-warm shadow-warm-hover transition-all duration-300 group flex flex-col md:flex-row">
-<div class="h-64 md:h-auto md:w-1/2 relative overflow-hidden">
-<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/img/img-e57c62ca1490.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-<div class="absolute bottom-4 left-4 bg-secondary/80 text-on-secondary px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-                            $75/hr • 60 mins
-                        </div>
-</div>
-<div class="p-md flex flex-col justify-center md:w-1/2">
-<h3 class="font-headline-md text-headline-md text-primary mb-sm">Private Lessons</h3>
-<p class="text-on-surface-variant mb-md flex-grow">
-                            Personalized instruction tailored exactly to your goals and skill level. One-on-one attention ensures rapid progress, safety, and a deep connection between horse and rider.
-                        </p>
-<button class="self-start text-primary font-label-md flex items-center group-hover:text-primary-container transition-colors">
-                            Book Private <span class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Beginner Intro -->
-<div class="col-span-1 bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-warm shadow-warm-hover transition-all duration-300 group flex flex-col">
-<div class="h-48 relative overflow-hidden">
-<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/img/img-352ba52c5605.jpg"/>
-<div class="absolute bottom-4 left-4 bg-secondary/80 text-on-secondary px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-                            $60 • 45 mins
-                        </div>
-</div>
-<div class="p-md flex flex-col flex-grow">
-<h3 class="font-headline-md text-headline-md text-primary mb-sm">Beginner Intro</h3>
-<p class="text-on-surface-variant mb-md flex-grow text-sm">
-                            A gentle, stress-free introduction to horses. Focuses on safe handling, grooming basics, and an introductory ride to build confidence.
-                        </p>
-<button class="text-primary font-label-md flex items-center group-hover:text-primary-container transition-colors mt-auto">
-                            Start Journey <span class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Group Lessons -->
-<div class="col-span-1 bg-surface-container-lowest rounded-3xl border border-outline-variant/30 overflow-hidden shadow-warm shadow-warm-hover transition-all duration-300 group flex flex-col">
-<div class="h-48 relative overflow-hidden">
-<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/img/img-e57c62ca1490.jpg"/>
-<div class="absolute bottom-4 left-4 bg-secondary/80 text-on-secondary px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-                            $50/hr • 60 mins
-                        </div>
-</div>
-<div class="p-md flex flex-col flex-grow">
-<h3 class="font-headline-md text-headline-md text-primary mb-sm">Group Lessons</h3>
-<p class="text-on-surface-variant mb-md flex-grow text-sm">
-                            Join a small group (3-5 riders) of similar ability. A fun, social, and collaborative learning environment perfect for weekly progression.
-                        </p>
-<button class="text-primary font-label-md flex items-center group-hover:text-primary-container transition-colors mt-auto">
-                            Join Group <span class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Summer Camp -->
-<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface-container-low rounded-3xl border border-outline-variant/30 overflow-hidden shadow-warm shadow-warm-hover transition-all duration-300 group flex flex-col md:flex-row items-center">
-<div class="p-md flex flex-col justify-center md:w-3/5 order-2 md:order-1">
-<div class="inline-flex items-center bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold mb-sm w-max">
-<span class="material-symbols-outlined text-[16px] mr-1">wb_sunny</span> Summer Special
-                        </div>
-<h3 class="font-headline-md text-headline-md text-primary mb-sm">Equestrian Summer Camp</h3>
-<p class="text-on-surface-variant mb-md">
-                            An immersive week-long experience for kids aged 8-14. They'll learn comprehensive horsemanship, riding daily, stable management, and make lifelong friends in a nurturing environment.
-                        </p>
-<div class="flex items-center gap-4">
-<span class="text-primary font-bold">$450/week</span>
-<span class="text-on-surface-variant text-sm">Mon-Fri, 9am-3pm</span>
-</div>
-</div>
-<div class="h-64 md:h-full w-full md:w-2/5 relative overflow-hidden order-1 md:order-2 p-4">
-<img alt="" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700" src="assets/img/img-eabe364e41e9.jpg"/>
-</div>
-</div>
-</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero__media"><img src="assets/img/img-e71ee4f900af.jpg" alt="A young rider smiling during a riding lesson" /></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow reveal" style="color:#d8d0bd">Lessons &amp; Training</p>
+    <h1 class="reveal" data-delay="1">Find your seat. Build your confidence.</h1>
+    <p class="lead reveal" data-delay="2">Patient, expert instruction for every age and level — from a first walk in the arena to a polished competitive seat.</p>
+  </div>
 </section>
-<!-- CTA Section -->
-<section class="max-w-4xl mx-auto px-margin-desktop max-md:px-margin-mobile py-xl text-center">
-<div class="bg-surface-container-high rounded-3xl p-lg shadow-warm border border-outline-variant/20 relative overflow-hidden">
-<!-- Decorative element -->
-<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/10 rounded-full blur-2xl"></div>
-<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl"></div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-sm relative z-10">Ready to Ride?</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl mx-auto relative z-10">
-                    Join our community and start your equestrian journey today. We provide the horses, the gear, and the guidance.
-                </p>
-<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-lg hover:bg-primary-container transition-all shadow-warm hover:-translate-y-1 relative z-10">
-                    Book Your First Lesson
-                </button>
-</div>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container page-intro">
+    <p class="eyebrow reveal">Our approach</p>
+    <p class="lead reveal" data-delay="1">We meet every rider where they are. Lessons are <em>unhurried</em>, encouraging, and safety-first — built around calm, well-schooled horses and instructors who genuinely love to teach.</p>
+  </div>
 </section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low w-full rounded-t-xl px-margin-desktop max-md:px-margin-mobile py-xl">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div class="col-span-1 md:col-span-4 mb-md">
-<span class="font-headline-md text-headline-md font-bold text-primary">Horse Haven</span>
-</div>
-<div class="flex flex-col gap-2">
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="boarding.html">Boarding Services</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="lessons.html">Riding Lessons</a>
-</div>
-<div class="flex flex-col gap-2">
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="gallery.html">Photo Gallery</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="about.html">Our Heritage</a>
-</div>
-<div class="flex flex-col gap-2">
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="contact.html">Contact Us</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
-</div>
-<div class="col-span-1 md:col-span-4 mt-lg border-t border-outline-variant/30 pt-md text-sm text-on-surface-variant">
-                © 2024 Horse Haven Stables. All rights reserved.
-            </div>
-</div>
+
+<!-- PROGRAMS -->
+<section class="section section--alt">
+  <div class="container">
+    <p class="eyebrow reveal" style="margin-bottom:0.6rem;">Programs</p>
+    <h2 class="reveal" style="margin-bottom:clamp(2.5rem,5vw,4rem);">Ways to ride with us.</h2>
+    <div class="rows">
+
+      <div class="split feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-0a07dbc160c0.jpg" alt="An instructor working one-on-one with riders" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">01 — Private Lessons</span>
+          <h3>Private lessons</h3>
+          <p class="measure">One-on-one attention tailored entirely to your goals — the fastest way to progress, whatever your starting point.</p>
+          <ul class="spec">
+            <li><span class="k">Duration</span><span class="v">45 minutes</span></li>
+            <li><span class="k">Level</span><span class="v">All levels</span></li>
+            <li><span class="k">From</span><span class="v">$70 / lesson</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Book a private lesson <span class="arw">→</span></a>
+        </div>
+      </div>
+
+      <div class="split split--media-right feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-e57c62ca1490.jpg" alt="A group lesson underway in the outdoor arena" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">02 — Group Lessons</span>
+          <h3>Group lessons</h3>
+          <p class="measure">Learn alongside riders at your level — social, motivating, and a wonderful way to build arena confidence.</p>
+          <ul class="spec">
+            <li><span class="k">Duration</span><span class="v">60 minutes</span></li>
+            <li><span class="k">Group size</span><span class="v">Up to 4 riders</span></li>
+            <li><span class="k">From</span><span class="v">$45 / lesson</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Join a group <span class="arw">→</span></a>
+        </div>
+      </div>
+
+      <div class="split feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-352ba52c5605.jpg" alt="A child greeting a gentle horse" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">03 — Beginner Intro</span>
+          <h3>Beginner intro</h3>
+          <p class="measure">A gentle first experience — meet, groom, and ride a calm horse with a patient instructor at your side. Perfect for first-timers and nervous beginners.</p>
+          <ul class="spec">
+            <li><span class="k">Duration</span><span class="v">60 minutes</span></li>
+            <li><span class="k">Includes</span><span class="v">Groom + ride</span></li>
+            <li><span class="k">From</span><span class="v">$55 / session</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Try a first lesson <span class="arw">→</span></a>
+        </div>
+      </div>
+
+      <div class="split split--media-right feature">
+        <div class="split__media reveal"><div class="feature__media"><img src="assets/img/img-3829ec61d53e.jpg" alt="A child bonding with a friendly horse" /></div></div>
+        <div class="split__body reveal" data-delay="1">
+          <span class="feature__index">04 — Summer Camp</span>
+          <h3>Summer camp</h3>
+          <p class="measure">Week-long day camps where young riders learn horsemanship from the ground up — grooming, safety, riding, and a lot of fun.</p>
+          <ul class="spec">
+            <li><span class="k">Length</span><span class="v">5-day weeks</span></li>
+            <li><span class="k">Ages</span><span class="v">7–15 years</span></li>
+            <li><span class="k">From</span><span class="v">$320 / week</span></li>
+          </ul>
+          <a class="link-arrow" href="contact.html">Reserve a camp spot <span class="arw">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow reveal" style="text-align:center; margin-bottom:3rem;">Lesson levels</p>
+    <div class="values">
+      <div class="values__item reveal"><div class="values__n">I</div><div class="values__t">Beginner</div><p class="values__d">Mounting, balance, walk and trot, and confidence in the saddle.</p></div>
+      <div class="values__item reveal" data-delay="1"><div class="values__n">II</div><div class="values__t">Intermediate</div><p class="values__d">Cantering, transitions, posture, and starting over small fences.</p></div>
+      <div class="values__item reveal" data-delay="2"><div class="values__n">III</div><div class="values__t">Advanced</div><p class="values__d">Refined position, jumping courses, and discipline-specific training.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTORS -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="page-intro" style="margin-bottom:clamp(2.5rem,5vw,3.5rem);">
+      <p class="eyebrow reveal">Your instructors</p>
+      <h2 class="reveal" data-delay="1">Taught by people who love it.</h2>
+    </div>
+    <div class="team team--3">
+      <article class="member reveal">
+        <div class="member__photo"><img src="assets/img/img-147afd121054.jpg" alt="Elena Rodriguez, Head Trainer" /></div>
+        <h3 class="member__name">Elena Rodriguez</h3>
+        <p class="member__role">Head Trainer · Certified</p>
+        <p class="member__bio">Twenty years in the saddle across dressage and hunter-jumper. Elena has a gift for steadying nervous beginners and sharpening seasoned competitors alike.</p>
+      </article>
+      <article class="member reveal" data-delay="1">
+        <div class="member__photo"><img src="assets/img/img-4adc7383b83e.jpg" alt="Sarah Mitchell, Founder & Instructor" /></div>
+        <h3 class="member__name">Sarah Mitchell</h3>
+        <p class="member__role">Founder &amp; Instructor</p>
+        <p class="member__bio">Sarah started Horse Haven to share the patient, kind horsemanship she grew up with. She teaches beginners and leads our youth programs.</p>
+      </article>
+      <article class="member reveal" data-delay="2">
+        <div class="member__photo"><img src="assets/img/img-e606af43bfdf.jpg" alt="Jamie Chen, Lesson Assistant" /></div>
+        <h3 class="member__name">Jamie Chen</h3>
+        <p class="member__role">Lesson Assistant</p>
+        <p class="member__bio">Jamie keeps lessons safe and smooth — leading horses, coaching from the rail, and making sure every young rider leaves grinning.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow reveal" style="text-align:center; margin-bottom:3rem;">What to expect</p>
+    <div class="values">
+      <div class="values__item reveal"><div class="values__n">01</div><div class="values__t">Arrive &amp; meet</div><p class="values__d">We'll greet you, talk through your goals, and introduce your horse.</p></div>
+      <div class="values__item reveal" data-delay="1"><div class="values__n">02</div><div class="values__t">Groom &amp; tack</div><p class="values__d">Learn to brush, saddle, and bond — half the joy is on the ground.</p></div>
+      <div class="values__item reveal" data-delay="2"><div class="values__n">03</div><div class="values__t">Ride</div><p class="values__d">Mounted instruction at your pace, in a safe, enclosed arena.</p></div>
+      <div class="values__item reveal" data-delay="3"><div class="values__n">04</div><div class="values__t">Reflect</div><p class="values__d">A quick recap and a plan for next time, so progress keeps building.</p></div>
+    </div>
+    <hr class="rule" style="margin:clamp(3rem,6vw,5rem) 0 2.5rem;" />
+    <div class="page-intro">
+      <p class="eyebrow reveal">What to bring</p>
+      <ul class="cols-list reveal" data-delay="1" style="columns:2;">
+        <li>Long trousers (jeans or breeches)</li>
+        <li>Boots with a small heel</li>
+        <li>A riding helmet (loaners available)</li>
+        <li>Water and a positive attitude</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING INVITE -->
+<section class="invite">
+  <div class="invite__media"><img src="assets/img/img-e57c62ca1490.jpg" alt="" /></div>
+  <div class="container invite__inner">
+    <h2 class="reveal">Ready for your first lesson?</h2>
+    <p class="reveal" data-delay="1">Tell us a little about the rider and we'll match you with the right instructor and horse.</p>
+    <a class="link-arrow reveal" data-delay="2" href="contact.html">Book a lesson <span class="arw">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><span class="brand">Horse Haven</span><p class="footer-about">Exceptional equine care and patient instruction, in a warm and family-friendly countryside setting.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="boarding.html">Boarding</a></li><li><a href="lessons.html">Lessons &amp; Training</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li><a href="contact.html">Plan a visit</a></li><li><a href="contact.html">Contact us</a></li><li><p>Mon–Sat · 8am–6pm</p></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a class="link-underline" href="tel:+15555550123">(555) 555-0123</a></li><li><a class="link-underline" href="mailto:hello@horsehaven.com">hello@horsehaven.com</a></li><li><p>123 Meadow Lane, Countryside</p></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Horse Haven. All rights reserved.</span><span>Boarding &amp; Riding Lessons</span></div>
+  </div>
 </footer>
-</body></html>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

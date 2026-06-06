@@ -1,301 +1,95 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<link rel="icon" type="image/jpeg" href="assets/logo.jpg"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Gallery - Horse Haven</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed-dim": "#c9c6c1",
-                        "surface-container-highest": "#f1dfd1",
-                        "error-container": "#ffdad6",
-                        "on-primary-fixed-variant": "#653d1e",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-fixed": "#d6e8d0",
-                        "on-error": "#ffffff",
-                        "tertiary-container": "#696864",
-                        "on-secondary-container": "#576754",
-                        "surface-tint": "#805533",
-                        "on-background": "#231a11",
-                        "surface-variant": "#f1dfd1",
-                        "secondary-fixed-dim": "#baccb4",
-                        "on-primary-fixed": "#301400",
-                        "on-tertiary-fixed-variant": "#474743",
-                        "surface-container-high": "#f7e5d7",
-                        "surface-bright": "#fff8f4",
-                        "on-secondary-fixed": "#111f10",
-                        "primary-fixed": "#ffdcc5",
-                        "on-primary": "#ffffff",
-                        "error": "#ba1a1a",
-                        "secondary": "#536350",
-                        "primary": "#6f4627",
-                        "surface": "#fff8f4",
-                        "secondary-container": "#d3e5cd",
-                        "primary-fixed-dim": "#f4bb92",
-                        "inverse-surface": "#392f25",
-                        "background": "#fff8f4",
-                        "on-error-container": "#93000a",
-                        "on-tertiary": "#ffffff",
-                        "surface-dim": "#e8d7c9",
-                        "on-tertiary-fixed": "#1c1c18",
-                        "tertiary-fixed": "#e5e2dc",
-                        "surface-container-low": "#fff1e7",
-                        "outline-variant": "#d5c3b8",
-                        "inverse-primary": "#f4bb92",
-                        "on-surface": "#231a11",
-                        "outline": "#83746b",
-                        "on-tertiary-container": "#eae8e2",
-                        "tertiary": "#51504c",
-                        "on-surface-variant": "#51443c",
-                        "inverse-on-surface": "#ffeee0",
-                        "primary-container": "#8b5e3c",
-                        "surface-container": "#fdebdc",
-                        "on-primary-container": "#ffe3d1",
-                        "on-secondary-fixed-variant": "#3b4b39",
-                        "on-secondary": "#ffffff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "xl": "80px",
-                        "sm": "12px",
-                        "md": "24px",
-                        "lg": "48px",
-                        "xs": "4px",
-                        "margin-mobile": "16px",
-                        "base": "8px"
-                    },
-                    "fontFamily": {
-                        "body-md": ["Source Sans 3"],
-                        "headline-lg-mobile": ["Plus Jakarta Sans"],
-                        "body-lg": ["Source Sans 3"],
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "display-lg": ["Plus Jakarta Sans"],
-                        "label-md": ["Source Sans 3"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .warm-shadow {
-            box-shadow: 0 10px 25px -5px rgba(139, 94, 60, 0.1), 0 8px 10px -6px rgba(139, 94, 60, 0.05);
-        }
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 24px;
-        }
-        @media (min-width: 768px) {
-            .masonry-grid {
-                column-count: 2;
-            }
-        }
-        @media (min-width: 1024px) {
-            .masonry-grid {
-                column-count: 3;
-            }
-        }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 24px;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery — Horse Haven</title>
+<meta name="description" content="A look around Horse Haven — our horses, facilities, lessons, and events in the heart of the countryside." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..560;1,9..144,300..500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
-<body class="bg-background text-on-background font-body-md antialiased pt-[88px]">
-<!-- TopNavBar -->
-<nav class="bg-surface dark:bg-surface-container-low font-body-md text-body-md fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto">
-<div class="flex items-center gap-sm">
-<img alt="Horse Haven Logo" class="w-10 h-10 object-contain rounded-md" src="assets/img/img-629adbb3c31c.jpg"/>
-<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Horse Haven</span>
-</div>
-<div class="hidden md:flex items-center gap-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="boarding.html">Boarding</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="lessons.html">Lessons</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2" href="gallery.html">Gallery</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="about.html">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-primary-container/10 px-3 py-2 rounded-md" href="contact.html">Contact</a>
-</div>
-<div class="hidden md:block">
-<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:-translate-y-[2px] transition-transform duration-200 shadow-sm">
-                    Contact Us
-                </button>
-</div>
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined text-2xl">menu</span>
-</button>
-</div>
-</nav>
-<main class="min-h-screen">
-<!-- Header Section -->
-<section class="px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto text-center">
-<h1 class="font-display-lg text-display-lg text-primary mb-md">Life at Horse Haven</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                Explore the beauty and community of our stable through the eyes of our riders and visitors.
-            </p>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img class="mark" src="assets/logo.jpg" alt="" /> Horse Haven</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav" aria-label="Primary">
+    <a class="link-underline" href="index.html">Home</a>
+    <a class="link-underline" href="boarding.html">Boarding</a>
+    <a class="link-underline" href="lessons.html">Lessons</a>
+    <a class="link-underline" href="gallery.html">Gallery</a>
+    <a class="link-underline" href="about.html">About</a>
+    <a class="cta" href="contact.html">Plan a Visit</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero__media"><img src="assets/img/img-e7def454eca3.jpg" alt="A wide view of the Horse Haven farm with rolling hills and a red barn" /></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow reveal" style="color:#d8d0bd">Gallery</p>
+    <h1 class="reveal" data-delay="1">A look around the farm.</h1>
+    <p class="lead reveal" data-delay="2">The horses, the fields, the quiet mornings and the busy lesson afternoons — a little of everyday life at Horse Haven.</p>
+  </div>
 </section>
-<!-- Gallery Section -->
-<section class="px-margin-mobile md:px-margin-desktop pb-xl max-w-7xl mx-auto">
-<!-- Filters -->
-<div class="flex flex-wrap justify-center gap-sm mb-lg" id="gallery-filters">
-<button class="px-4 py-2 rounded-full font-label-md transition-all duration-200 bg-secondary/20 text-secondary border border-secondary/30 hover:bg-secondary/30 active-filter" data-filter="all">All</button>
-<button class="px-4 py-2 rounded-full font-label-md transition-all duration-200 bg-surface-container text-on-surface-variant border border-outline-variant hover:bg-secondary/10" data-filter="horses">Horses</button>
-<button class="px-4 py-2 rounded-full font-label-md transition-all duration-200 bg-surface-container text-on-surface-variant border border-outline-variant hover:bg-secondary/10" data-filter="facility">Facility</button>
-<button class="px-4 py-2 rounded-full font-label-md transition-all duration-200 bg-surface-container text-on-surface-variant border border-outline-variant hover:bg-secondary/10" data-filter="lessons">Lessons</button>
-<button class="px-4 py-2 rounded-full font-label-md transition-all duration-200 bg-surface-container text-on-surface-variant border border-outline-variant hover:bg-secondary/10" data-filter="events">Events</button>
-</div>
-<!-- Masonry Grid -->
-<div class="masonry-grid" id="gallery-grid">
-<!-- Item 1 -->
-<div class="masonry-item group relative overflow-hidden rounded-xl border border-outline-variant/30 warm-shadow" data-category="facility">
-<img alt="A wide shot of a beautiful horse farm with rolling hills, white fences, and a large red barn." class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="assets/img/img-e7def454eca3.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
-<span class="text-white font-headline-md text-headline-md drop-shadow-md">Our Grounds</span>
-</div>
-</div>
-<!-- Item 2 -->
-<div class="masonry-item group relative overflow-hidden rounded-xl border border-outline-variant/30 warm-shadow" data-category="horses">
-<img alt="A beautiful, majestic brown horse standing in a lush green pasture with a wooden fence in the background." class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="assets/img/img-2f703ce0c0e3.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
-<span class="text-white font-headline-md text-headline-md drop-shadow-md">Majestic Friends</span>
-</div>
-</div>
-<!-- Item 3 -->
-<div class="masonry-item group relative overflow-hidden rounded-xl border border-outline-variant/30 warm-shadow" data-category="lessons">
-<img alt="A young rider in equestrian gear happily riding a horse during a lesson." class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="assets/img/img-e71ee4f900af.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
-<span class="text-white font-headline-md text-headline-md drop-shadow-md">Riding Lessons</span>
-</div>
-</div>
-<!-- Item 4 -->
-<div class="masonry-item group relative overflow-hidden rounded-xl border border-outline-variant/30 warm-shadow" data-category="facility">
-<img alt="Modern and clean horse stable interior with spacious wooden stalls." class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="assets/img/img-f46e793bf4e4.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
-<span class="text-white font-headline-md text-headline-md drop-shadow-md">Inside the Stables</span>
-</div>
-</div>
-<!-- Item 5 -->
-<div class="masonry-item group relative overflow-hidden rounded-xl border border-outline-variant/30 warm-shadow" data-category="horses">
-<img alt="Close-up of a friendly horse's face being petted by a child." class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="assets/img/img-3829ec61d53e.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
-<span class="text-white font-headline-md text-headline-md drop-shadow-md">Gentle Connections</span>
-</div>
-</div>
-<!-- Item 6 -->
-<div class="masonry-item group relative overflow-hidden rounded-xl border border-outline-variant/30 warm-shadow" data-category="events">
-<img alt="A group of people gathered for an equestrian event at a stable." class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" src="assets/img/img-b33ac5d40261.jpg"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
-<span class="text-white font-headline-md text-headline-md drop-shadow-md">Community Events</span>
-</div>
-</div>
-</div>
+
+<!-- GALLERY -->
+<section class="section">
+  <div class="container">
+    <div class="filters reveal" role="tablist" aria-label="Filter gallery">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="horses">Horses</button>
+      <button data-filter="facility">Facility</button>
+      <button data-filter="lessons">Lessons</button>
+      <button data-filter="events">Events</button>
+    </div>
+    <div class="gallery reveal" data-delay="1">
+      <figure data-cat="facility"><img src="assets/img/img-92d8ef0f66f8.jpg" alt="The stables at golden-hour sunrise" /></figure>
+      <figure data-cat="horses"><img src="assets/img/img-2f703ce0c0e3.jpg" alt="A majestic brown horse in a green pasture" /></figure>
+      <figure data-cat="lessons"><img src="assets/img/img-e71ee4f900af.jpg" alt="A young rider smiling during a lesson" /></figure>
+      <figure data-cat="facility"><img src="assets/img/img-f46e793bf4e4.jpg" alt="Clean, modern stable interior with wooden stalls" /></figure>
+      <figure data-cat="horses"><img src="assets/img/img-352ba52c5605.jpg" alt="A child gently petting a horse" /></figure>
+      <figure data-cat="lessons"><img src="assets/img/img-e57c62ca1490.jpg" alt="A group lesson in the outdoor arena" /></figure>
+      <figure data-cat="events"><img src="assets/img/img-b33ac5d40261.jpg" alt="People gathered for an event at the stable" /></figure>
+      <figure data-cat="horses"><img src="assets/img/img-551b5e7b3b05.jpg" alt="Horses grazing together in the pasture" /></figure>
+      <figure data-cat="facility"><img src="assets/img/img-59f0cf964e34.jpg" alt="The tack room" /></figure>
+      <figure data-cat="lessons"><img src="assets/img/img-0a07dbc160c0.jpg" alt="An instructor leading riders on horseback" /></figure>
+      <figure data-cat="events"><img src="assets/img/img-eabe364e41e9.jpg" alt="An outdoor equestrian event with tents at dusk" /></figure>
+      <figure data-cat="horses"><img src="assets/img/img-3829ec61d53e.jpg" alt="A close-up of a horse being petted by a child" /></figure>
+      <figure data-cat="facility"><img src="assets/img/img-65c8f8187f40.jpg" alt="A sunlit indoor box stall" /></figure>
+      <figure data-cat="horses"><img src="assets/img/img-a70429285349.jpg" alt="Horses grazing in a sunlit countryside pasture" /></figure>
+      <figure data-cat="facility"><img src="assets/img/img-e7def454eca3.jpg" alt="Wide view of the farm with rolling hills" /></figure>
+      <figure data-cat="horses"><img src="assets/img/img-0283ea3bc282.jpg" alt="A horse resting in a sunlit stall" /></figure>
+    </div>
+  </div>
 </section>
-<!-- Call to Action -->
-<section class="bg-surface-container py-xl">
-<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Come See It in Person</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl mx-auto">
-                    Experience the warmth and beauty of our facilities firsthand. We'd love to show you around and introduce you to our herd.
-                </p>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md text-lg hover:-translate-y-[2px] transition-transform duration-200 shadow-md">
-                    Book a Tour
-                </button>
-</div>
+
+<!-- CLOSING INVITE -->
+<section class="invite">
+  <div class="invite__media"><img src="assets/img/img-92d8ef0f66f8.jpg" alt="" /></div>
+  <div class="container invite__inner">
+    <h2 class="reveal">See it in person.</h2>
+    <p class="reveal" data-delay="1">Photos only go so far — come walk the property and meet the horses yourself.</p>
+    <a class="link-arrow reveal" data-delay="2" href="contact.html">Plan a visit <span class="arw">→</span></a>
+  </div>
 </section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-high dark:bg-surface-container-highest font-body-md text-body-md w-full rounded-t-xl flat no shadows transition-opacity duration-200 mt-lg">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto">
-<!-- Brand -->
-<div class="flex flex-col gap-sm">
-<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Horse Haven</span>
-<p class="text-on-surface-variant mt-sm">© 2024 Horse Haven. All rights reserved.</p>
-</div>
-<!-- Links Group 1 -->
-<div class="flex flex-col gap-sm">
-<h3 class="font-label-md text-primary font-bold mb-xs">Navigation</h3>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="boarding.html">Boarding</a>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="lessons.html">Lessons</a>
-<a class="text-primary font-bold hover:opacity-80 transition-colors duration-200" href="gallery.html">Gallery</a>
-</div>
-<!-- Links Group 2 -->
-<div class="flex flex-col gap-sm">
-<h3 class="font-label-md text-primary font-bold mb-xs">Company</h3>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="about.html">About</a>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="contact.html">Contact</a>
-</div>
-<!-- Legal -->
-<div class="flex flex-col gap-sm">
-<h3 class="font-label-md text-primary font-bold mb-xs">Legal</h3>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-colors duration-200" href="#">Terms of Service</a>
-</div>
-</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><span class="brand">Horse Haven</span><p class="footer-about">Exceptional equine care and patient instruction, in a warm and family-friendly countryside setting.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="boarding.html">Boarding</a></li><li><a href="lessons.html">Lessons &amp; Training</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li><a href="contact.html">Plan a visit</a></li><li><a href="contact.html">Contact us</a></li><li><p>Mon–Sat · 8am–6pm</p></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a class="link-underline" href="tel:+15555550123">(555) 555-0123</a></li><li><a class="link-underline" href="mailto:hello@horsehaven.com">hello@horsehaven.com</a></li><li><p>123 Meadow Lane, Countryside</p></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Horse Haven. All rights reserved.</span><span>Boarding &amp; Riding Lessons</span></div>
+  </div>
 </footer>
-<script>
-        // Simple Gallery Filtering Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('#gallery-filters button');
-            const galleryItems = document.querySelectorAll('.masonry-item');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Reset active state
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-secondary/20', 'text-secondary', 'border-secondary/30');
-                        b.classList.add('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant');
-                    });
-                    
-                    // Set active state
-                    btn.classList.remove('bg-surface-container', 'text-on-surface-variant', 'border-outline-variant');
-                    btn.classList.add('bg-secondary/20', 'text-secondary', 'border-secondary/30');
-
-                    const filterValue = btn.getAttribute('data-filter');
-
-                    galleryItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                            // Optional: Add a small fade-in effect
-                            item.animate([
-                                { opacity: 0, transform: 'scale(0.95)' },
-                                { opacity: 1, transform: 'scale(1)' }
-                            ], { duration: 300, easing: 'ease-out' });
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-</body></html>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

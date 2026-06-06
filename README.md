@@ -28,10 +28,14 @@ public/              ← the static site (deploy root)
   about.html
   contact.html
   assets/
+    css/site.css     ← hand-authored design system ("Editorial Equestrian")
+    js/site.js       ← header state, scroll reveals, mobile nav, gallery filter
     logo.jpg         ← generated logo (also used as favicon)
     img/             ← page imagery (downloaded locally, self-contained)
 ```
-Pages are plain HTML styled with Tailwind (via CDN) + Google Fonts. No build step required.
+Hand-authored HTML + CSS (no framework, no build step). Type: **Fraunces** (display) +
+**Hanken Grotesk** (body) via Google Fonts. Design language: warm ivory paper, espresso
+ink, muted-sage accent; hairline rules and whitespace instead of cards; full-bleed imagery.
 
 ## Status
 - [x] Repo connected, foundation files
@@ -50,6 +54,6 @@ Pages are plain HTML styled with Tailwind (via CDN) + Google Fonts. No build ste
 4. Save & Deploy. Every push to `main` auto-deploys.
 
 ## Notes / future polish
-- Tailwind is loaded from the CDN (fine for now; for production, compile with the Tailwind CLI to drop the runtime warning and shrink payload).
-- Replace placeholder copy, contact details, prices, and AI-generated imagery with real content.
-- `Privacy Policy` / `Terms of Service` footer links are placeholders (`#`).
+- Replace placeholder copy, stats (40 acres, 15+ years), prices, hours, contact details, and AI-generated imagery with real content.
+- The **contact form** is not yet wired to a backend — connect it to Cloudflare Pages Functions or a service like Formspree before launch (see the comment in `contact.html`).
+- The contact-page **map** is a styled placeholder linking out — swap in a real embedded map for the actual address.
