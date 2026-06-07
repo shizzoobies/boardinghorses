@@ -52,6 +52,60 @@
     document.querySelectorAll('.hero .reveal').forEach((el) => el.classList.add('in'));
   });
 
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Parallax on full-bleed media (hero / page-hero / closing invite).
+  if (!reduce) {
+    const layers = document.querySelectorAll('.hero__media, .page-hero__media, .invite__media');
+    if (layers.length) {
+      let ticking = false;
+      const update = () => {
+        const vh = window.innerHeight;
+        layers.forEach((el) => {
+          const sec = el.parentElement;
+          const r = sec.getBoundingClientRect();
+          if (r.bottom < -200 || r.top > vh + 200) return; // offscreen, skip
+          const secCenter = r.top + r.height / 2;
+          const max = el.offsetHeight * 0.07;
+          let offset = (secCenter - vh / 2) * -0.07;
+          offset = Math.max(-max, Math.min(max, offset));
+          el.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0)';
+        });
+        ticking = false;
+      };
+      const onParallax = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+      update();
+      window.addEventListener('scroll', onParallax, { passive: true });
+      window.addEventListener('resize', onParallax, { passive: true });
+    }
+  }
+
+  // Count-up for stat numerals (only plain integers, optional trailing "+").
+  const nums = document.querySelectorAll('.values__n');
+  if (nums.length && 'IntersectionObserver' in window && !reduce) {
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        countObs.unobserve(el);
+        const m = el.textContent.trim().match(/^(\d+)(\+?)$/);
+        if (!m) return;
+        const target = parseInt(m[1], 10);
+        const suffix = m[2] || '';
+        const dur = 1100;
+        const start = performance.now();
+        const tick = (now) => {
+          const p = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + (p === 1 ? suffix : '');
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach((n) => countObs.observe(n));
+  }
+
   // Gallery category filter.
   const filters = document.querySelector('.filters');
   if (filters) {

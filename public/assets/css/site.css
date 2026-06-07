@@ -412,3 +412,103 @@ p { color: var(--ink-soft); }
   .gallery { columns: 2 160px; column-gap: 10px; }
   .gallery figure { margin-bottom: 10px; }
 }
+
+/* ============================================================
+   v2 — LIFT: depth, atmosphere, color contrast, motion
+   ============================================================ */
+:root {
+  --clay:      #c0703f;   /* desert terracotta — warm pop / secondary accent */
+  --clay-soft: #d68a59;
+  --sand:      #ece0c9;   /* deeper cream so section alternation actually reads */
+  --shadow-img:  0 28px 55px -26px rgba(48,32,18,0.55), 0 10px 24px -18px rgba(48,32,18,0.40);
+  --shadow-soft: 0 20px 44px -30px rgba(48,32,18,0.50);
+  --shadow-head: 0 10px 30px -12px rgba(36,29,24,0.18);
+  /* tighter vertical rhythm — less blank space */
+  --section: clamp(4rem, 8.5vw, 7.5rem);
+}
+
+/* deeper alt fill for visible scroll contrast */
+.section--alt { background: var(--sand); }
+
+/* film grain — subtle tactile texture over the whole page */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 200; pointer-events: none;
+  opacity: 0.05; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- elevation on imagery (lift off the page) ----------
+   Shadow on the container (renders outside, never clipped);
+   overflow:hidden masks the inner image-zoom reveal. */
+.feature__media { box-shadow: var(--shadow-img); overflow: hidden; border-radius: var(--radius); }
+.member__photo { box-shadow: var(--shadow-img); }
+.gallery figure { box-shadow: var(--shadow-soft); }
+.ptable, .accordion { filter: none; }
+.site-header.solid { box-shadow: 0 1px 0 var(--line), 0 10px 30px -22px rgba(36,29,24,0.5); }
+
+/* ---------- full-bleed media: ken-burns + parallax overscan ---------- */
+.hero, .page-hero, .invite { overflow: hidden; }
+.hero__media, .page-hero__media, .invite__media { top: -8%; bottom: -8%; height: auto; will-change: transform; }
+@keyframes kenburns { from { transform: scale(1.14); } to { transform: scale(1); } }
+.js .hero__media img, .js .page-hero__media img {
+  animation: kenburns 7s var(--ease) both; transform-origin: 50% 42%;
+}
+
+/* ---------- richer reveals ---------- */
+.js .reveal { transform: translateY(30px); }
+/* image-reveal zoom: inner media eases from slightly scaled to rest */
+.js .reveal .feature__media img,
+.js .reveal.member .member__photo img { transform: scale(1.1); transition: transform 1.3s var(--ease); }
+.js .reveal.in .feature__media img,
+.js .reveal.in.member .member__photo img { transform: scale(1); }
+/* a touch more stagger range */
+.js [data-delay="3"] { transition-delay: .24s }
+.js [data-delay="4"] { transition-delay: .34s }
+
+/* ---------- contrasting DARK stat band ---------- */
+.section--dark { position: relative; overflow: hidden; background: var(--ink); color: #e8ddca; }
+.section--dark::before {            /* warm atmospheric glow */
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(50% 70% at 82% 8%, rgba(192,112,63,0.30), transparent 60%),
+    radial-gradient(46% 80% at 10% 100%, rgba(108,117,81,0.28), transparent 62%);
+}
+.section--dark > * { position: relative; z-index: 1; }
+.section--dark h1, .section--dark h2, .section--dark h3 { color: var(--paper); }
+.section--dark p, .section--dark .values__d { color: #c0b39c; }
+.section--dark .eyebrow { color: var(--clay-soft); }
+.section--dark .values__n { color: var(--clay-soft); }
+.section--dark .values__item { border-color: rgba(255,253,249,0.14); }
+.section--dark .values__t { color: var(--paper); }
+.section--dark .rule { background: rgba(255,253,249,0.16); }
+.section--dark .link-arrow { color: var(--paper); }
+.section--dark .link-arrow::after { background: var(--paper); }
+
+/* slightly bolder stat numerals for presence */
+.values__n { font-weight: 460; letter-spacing: -0.02em; }
+
+/* ---------- header brand mark depth ---------- */
+.brand .mark { box-shadow: 0 4px 12px -4px rgba(0,0,0,0.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero__media img, .js .page-hero__media img { animation: none; }
+  .hero__media, .page-hero__media, .invite__media { top: 0; bottom: 0; transform: none !important; }
+}
+
+/* dark-section overrides for table / list / accordion / spec content */
+.section--dark .feature__index { color: var(--clay-soft); }
+.section--dark .ptable th, .section--dark .ptable td { color: #c0b39c; border-color: rgba(255,253,249,0.14); }
+.section--dark .ptable thead th { color: #9a8e79; }
+.section--dark .ptable .plan { color: var(--paper); }
+.section--dark .ptable tbody tr:last-child td { border-color: rgba(255,253,249,0.14); }
+.section--dark .ptable .num { color: var(--paper); }
+.section--dark .cols-list li { color: #e8ddca; border-color: rgba(255,253,249,0.14); }
+.section--dark .cols-list li::before { color: var(--clay-soft); }
+.section--dark .acc { border-color: rgba(255,253,249,0.14); }
+.section--dark .acc summary { color: var(--paper); }
+.section--dark .acc summary .pm { color: var(--clay-soft); }
+.section--dark .acc__body { color: #c0b39c; }
+.section--dark .accordion { border-color: rgba(255,253,249,0.14); }
+.section--dark .spec li { border-color: rgba(255,253,249,0.14); }
+.section--dark .spec .k { color: var(--paper); }
+.section--dark .spec .v { color: #9a8e79; }

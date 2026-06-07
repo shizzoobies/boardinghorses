@@ -32,8 +32,9 @@ Thumbs.db
 # OMC orchestration state
 .omc/
 
-# Local Claude config
+# Local Claude / Codex config — CONTAIN API KEYS, never commit
 .claude.json
+.codex/
 
 # Stitch working files — CONTAIN API KEY, never commit
 _stitch/
