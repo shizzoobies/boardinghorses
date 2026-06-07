@@ -594,3 +594,9 @@ body.no-hero .site-header .nav .cta:hover { background: var(--ink); color: var(-
   min-height: 86vh;
 }
 .invite { margin-block: clamp(2rem, 4vw, 3.25rem); }
+
+/* v6 — carry the framed treatment onto in-page photos for consistency */
+.feature__media, .member__photo, .gallery figure {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
