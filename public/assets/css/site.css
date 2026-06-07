@@ -335,7 +335,7 @@ p { color: var(--ink-soft); }
 .cols-list { columns: 2; column-gap: clamp(2rem,5vw,4.5rem); }
 .cols-list li { padding: 0.9rem 0; border-top: 1px solid var(--line); break-inside: avoid;
   display: flex; gap: 0.8rem; align-items: baseline; color: var(--ink); font-size: 0.98rem; }
-.cols-list li::before { content: "—"; color: var(--accent); }
+.cols-list li::before { content: "–"; color: var(--accent); }
 
 /* pricing table */
 .ptable { width: 100%; border-collapse: collapse; }
