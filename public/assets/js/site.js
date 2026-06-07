@@ -121,3 +121,56 @@
     });
   }
 })();
+
+/* ---- pitch-demo interactions: lightbox + fake-submit success ---- */
+(function () {
+  // Gallery lightbox
+  const gallery = document.querySelector('.gallery');
+  if (gallery) {
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.innerHTML = '<button class="lightbox__close" aria-label="Close">&times;</button><img alt="">';
+    document.body.appendChild(box);
+    const big = box.querySelector('img');
+    const close = () => { box.classList.remove('open'); document.body.style.overflow = ''; };
+    gallery.addEventListener('click', (e) => {
+      const img = e.target.closest('figure')?.querySelector('img');
+      if (!img) return;
+      big.src = img.src; big.alt = img.alt;
+      box.classList.add('open'); document.body.style.overflow = 'hidden';
+    });
+    box.addEventListener('click', (e) => { if (e.target === box || e.target.closest('.lightbox__close')) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  }
+
+  // Contact form: friendly success state (no backend in the demo)
+  const form = document.querySelector('.form-grid');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.querySelectorAll('input,select,textarea,button').forEach((el) => (el.disabled = true));
+      if (!form.querySelector('.form-note')) {
+        const note = document.createElement('p');
+        note.className = 'form-note';
+        note.textContent = 'Thank you — we’ll be in touch within a day or two.';
+        form.appendChild(note);
+      }
+    });
+  }
+
+  // Newsletter: inline confirmation
+  const news = document.querySelector('.newsletter');
+  if (news) {
+    news.addEventListener('submit', (e) => {
+      e.preventDefault();
+      news.innerHTML = '<p class="form-note">You’re on the list — welcome to the stable.</p>';
+    });
+  }
+})();
+
+/* pause hero video for reduced-motion users */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.hero__media video').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+  }
+})();
