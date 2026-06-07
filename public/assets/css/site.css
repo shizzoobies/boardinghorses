@@ -512,3 +512,31 @@ body::after {
 .section--dark .spec li { border-color: rgba(255,253,249,0.14); }
 .section--dark .spec .k { color: var(--paper); }
 .section--dark .spec .v { color: #9a8e79; }
+
+/* ============================================================
+   v3 — kill lone text blocks: centered statements + stacked headers
+   ============================================================ */
+/* centered manifesto / intro statement (no lopsided blank column) */
+.statement__inner { max-width: 50ch; margin-inline: auto; text-align: center; }
+.statement__inner .eyebrow { color: var(--accent); }
+.statement__text {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(1.7rem, 3.4vw, 2.75rem); line-height: 1.3;
+  letter-spacing: -0.01em; color: var(--ink); margin-top: 1.5rem;
+}
+.statement__text em { font-style: italic; color: var(--accent-deep); }
+.statement__sig {
+  font-family: var(--display); font-style: italic; font-size: 1.2rem;
+  color: var(--ink-faint); margin-top: 1.9rem;
+}
+.section--dark .statement__text { color: var(--paper); }
+.section--dark .statement__text em { color: var(--clay-soft); }
+
+/* section headers: stack eyebrow above heading — no empty side column */
+.page-intro { display: block; }
+.page-intro > .eyebrow { display: block; margin-bottom: 0.9rem; }
+
+/* v3.1 — widen statement so it fills the row (ch measured against tiny base
+   font was far too narrow); tune size for a confident 3–4 line block */
+.statement__inner { max-width: 52rem; }
+.statement__text { font-size: clamp(1.55rem, 3vw, 2.4rem); line-height: 1.26; }
