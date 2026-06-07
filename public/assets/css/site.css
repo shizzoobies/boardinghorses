@@ -540,3 +540,6 @@ body::after {
    font was far too narrow); tune size for a confident 3–4 line block */
 .statement__inner { max-width: 52rem; }
 .statement__text { font-size: clamp(1.55rem, 3vw, 2.4rem); line-height: 1.26; }
+
+/* v3.2 — value items without a numeral: title leads, no stray top gap */
+.values__item > .values__t:first-child { margin-top: 0; }
