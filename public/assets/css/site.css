@@ -566,3 +566,31 @@ body.no-hero .site-header {
 }
 body.no-hero .site-header .nav .cta { border-color: var(--ink); }
 body.no-hero .site-header .nav .cta:hover { background: var(--ink); color: var(--paper); }
+
+/* ============================================================
+   v5 — framed image heroes (border + shadow lift) + solid header
+   ============================================================ */
+/* header solid from first paint everywhere (hero is now inset/framed) */
+.site-header {
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(0.8rem, 1.4vw, 1.1rem);
+}
+.site-header .nav .cta { border-color: var(--ink); }
+.site-header .nav .cta:hover { background: var(--ink); color: var(--paper); }
+
+/* lift the full-bleed image blocks into floating framed panels */
+.hero, .invite {
+  margin-inline: clamp(0.75rem, 1.6vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-img);
+}
+.hero {
+  margin-top: clamp(4.5rem, 6vw, 5.5rem);   /* clear the fixed header */
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 86vh;
+}
+.invite { margin-block: clamp(2rem, 4vw, 3.25rem); }
