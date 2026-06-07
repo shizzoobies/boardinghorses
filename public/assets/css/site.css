@@ -543,3 +543,26 @@ body::after {
 
 /* v3.2 — value items without a numeral: title leads, no stray top gap */
 .values__item > .values__t:first-child { margin-top: 0; }
+
+/* ============================================================
+   v4 — compact page header (replaces redundant inner-page image heroes)
+   ============================================================ */
+.page-head {
+  padding-top: clamp(6rem, 8vw, 7.5rem);   /* clears the fixed header */
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
+  border-bottom: 1px solid var(--line);
+}
+.page-head .eyebrow { color: var(--accent); }
+.page-head h1 { margin-top: 0.7rem; max-width: 20ch; }
+
+/* pages without a cinematic hero: header is solid from first paint
+   (otherwise the light nav text would be invisible on the paper bg) */
+body.no-hero .site-header {
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  color: var(--ink);
+  border-bottom-color: var(--line);
+  padding-block: clamp(0.8rem, 1.4vw, 1.1rem);
+}
+body.no-hero .site-header .nav .cta { border-color: var(--ink); }
+body.no-hero .site-header .nav .cta:hover { background: var(--ink); color: var(--paper); }
