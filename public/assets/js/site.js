@@ -174,3 +174,16 @@
     document.querySelectorAll('.hero__media video').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
   }
 })();
+
+/* hero video: play only at the very top; freeze on current frame once scrolling */
+(function () {
+  const v = document.querySelector('.hero__media video');
+  if (!v) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const sync = () => {
+    if (window.scrollY <= 8) { if (v.paused) v.play().catch(() => {}); }
+    else if (!v.paused) { v.pause(); }
+  };
+  sync();
+  window.addEventListener('scroll', sync, { passive: true });
+})();
