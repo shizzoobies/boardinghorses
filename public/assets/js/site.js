@@ -92,3 +92,76 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
+
+/* CONTACT MODAL: intercept any link to the contact page and open a popup instead */
+(function () {
+  var MODAL_HTML =
+    '<div class="modal" id="contactModal" aria-hidden="true">' +
+      '<div class="modal__backdrop" data-close></div>' +
+      '<div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="cmTitle">' +
+        '<button class="modal__close" type="button" aria-label="Close" data-close>&times;</button>' +
+        '<p class="eyebrow">Get in touch</p>' +
+        '<h2 id="cmTitle" style="margin:0.4rem 0 0.5rem;">Let’s connect.</h2>' +
+        '<p class="modal__sub">Send us a message and we’ll be in touch — or reach us directly below.</p>' +
+        '<form class="form-grid" novalidate>' +
+          '<div class="field"><label for="cm-name">Full name</label><input id="cm-name" name="name" type="text" autocomplete="name" /></div>' +
+          '<div class="field"><label for="cm-email">Email address</label><input id="cm-email" name="email" type="email" autocomplete="email" /></div>' +
+          '<div class="field"><label for="cm-phone">Phone</label><input id="cm-phone" name="phone" type="tel" autocomplete="tel" /></div>' +
+          '<div class="field"><label for="cm-interest">I’m interested in</label>' +
+            '<select id="cm-interest" name="interest"><option>Riding lessons</option><option>Clubs &amp; programs</option><option>Horse camp</option><option>Training</option><option>Careers / volunteering</option><option>General inquiry</option></select></div>' +
+          '<div class="field full"><label for="cm-message">How can we help?</label><textarea id="cm-message" name="message" placeholder="Tell us about the rider, their age, and experience…"></textarea></div>' +
+          '<div class="field full"><button class="btn" type="submit">Send Message</button></div>' +
+        '</form>' +
+        '<p class="modal__direct">Prefer to call? <a href="tel:+16025359577">(602) 535-9577</a> &middot; <a href="mailto:contact@jordanstables.com">contact@jordanstables.com</a></p>' +
+      '</div>' +
+    '</div>';
+
+  var holder = document.createElement('div');
+  holder.innerHTML = MODAL_HTML;
+  var modal = holder.firstElementChild;
+  document.body.appendChild(modal);
+
+  var lastFocus = null;
+  function openModal(e) {
+    if (e) e.preventDefault();
+    lastFocus = document.activeElement;
+    // close mobile nav if open
+    var nav = document.querySelector('.nav.open');
+    if (nav) { nav.classList.remove('open'); var t = document.querySelector('.nav-toggle'); if (t) t.classList.remove('active'); }
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    var first = modal.querySelector('#cm-name');
+    if (first) setTimeout(function () { first.focus(); }, 60);
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  modal.addEventListener('click', function (e) { if (e.target.closest('[data-close]')) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  // intercept any anchor that points at the contact page (or #contact)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (/(^|\/)contact\.html(\?.*)?(#.*)?$/.test(href) || href === '#contact') openModal(e);
+  });
+
+  // demo submit (matches the rest of the site's fake-success forms)
+  var form = modal.querySelector('form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    form.querySelectorAll('input,select,textarea,button').forEach(function (el) { el.disabled = true; });
+    if (!form.querySelector('.form-note')) {
+      var n = document.createElement('p');
+      n.className = 'form-note';
+      n.textContent = 'Thank you — we’ll be in touch soon.';
+      form.appendChild(n);
+    }
+  });
+})();

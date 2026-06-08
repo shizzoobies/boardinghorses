@@ -404,3 +404,23 @@ body.home .hero > .container { width: 100%; max-width: var(--container); margin-
 .cdetail.hours .row { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid color-mix(in srgb, var(--ink, #1b1b1d) 10%, transparent); }
 .cdetail.hours .row:last-child { border-bottom: 0; }
 .cdetail.hours .v { font-size: 0.95rem; }
+
+/* contact modal */
+.modal { position: fixed; inset: 0; z-index: 200; display: none; }
+.modal.open { display: block; }
+.modal__backdrop { position: absolute; inset: 0; background: rgba(6,14,34,0.6); backdrop-filter: blur(3px); }
+.modal__panel {
+  position: relative; z-index: 1;
+  background: var(--cream, #FDFCFB);
+  max-width: 560px; width: calc(100% - 2rem);
+  margin: 6vh auto 2rem; max-height: 88vh; overflow: auto;
+  border-radius: 0.6rem; padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 30px 80px rgba(6,14,34,0.45);
+  animation: modalIn 0.25s ease;
+}
+@keyframes modalIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.modal__close { position: absolute; top: 0.5rem; right: 0.8rem; background: none; border: 0; font-size: 2rem; line-height: 1; color: var(--ink, #1b1b1d); cursor: pointer; padding: 0.2rem 0.5rem; border-radius: 0.3rem; }
+.modal__close:hover { background: color-mix(in srgb, var(--ink, #1b1b1d) 8%, transparent); }
+.modal__sub { color: var(--gray, #636E72); margin: 0 0 1.4rem; }
+.modal__direct { margin-top: 1.2rem; font-size: 0.92rem; color: var(--gray, #636E72); }
+@media (prefers-reduced-motion: reduce) { .modal__panel { animation: none; } }
