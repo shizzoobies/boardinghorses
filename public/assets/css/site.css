@@ -297,3 +297,8 @@ strong { color: var(--ink); font-weight: 700; }
 @media (max-width: 960px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer-grid a, .footer-grid p, .cdetail .v, .cdetail .v a { overflow-wrap: anywhere; }
+
+/* team: 4-up for the instructor roster */
+.team--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 960px) { .team--4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .team--4 { grid-template-columns: 1fr; } }
