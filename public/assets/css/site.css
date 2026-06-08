@@ -385,3 +385,22 @@ body.home .hero > .container { width: 100%; max-width: var(--container); margin-
 @media (max-width: 640px) {
   .calendar-embed iframe { height: 480px; }
 }
+
+/* blog article (single post) */
+.article { max-width: 760px; margin-inline: auto; }
+.article__media { border-radius: 0.5rem; overflow: hidden; margin-bottom: clamp(1.6rem, 3vw, 2.4rem); }
+.article__media img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.article h2 { margin: 2rem 0 0.7rem; }
+.article p { margin: 0 0 1.1rem; max-width: 68ch; }
+.article ul { margin: 0 0 1.3rem; padding-left: 1.2rem; }
+.article li { margin: 0 0 0.5rem; max-width: 64ch; }
+.article__back { margin-top: 2.4rem; }
+
+/* lesson price line */
+.price { font-weight: 700; color: var(--navy, #0A1F44); margin: 0.6rem 0 0.9rem; }
+.price__note { font-weight: 500; color: var(--gray); font-size: 0.85rem; }
+
+/* contact hours table */
+.cdetail.hours .row { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid color-mix(in srgb, var(--ink, #1b1b1d) 10%, transparent); }
+.cdetail.hours .row:last-child { border-bottom: 0; }
+.cdetail.hours .v { font-size: 0.95rem; }
