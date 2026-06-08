@@ -302,3 +302,9 @@ strong { color: var(--ink); font-weight: 700; }
 .team--4 { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 960px) { .team--4 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .team--4 { grid-template-columns: 1fr; } }
+
+/* partner thank-you */
+.partner__text { font-family: var(--display); font-style: italic; font-size: clamp(1.2rem,2vw,1.6rem); line-height: 1.5; color: var(--ink); max-width: 52ch; margin: 0 auto clamp(2rem,4vw,3rem); text-align: center; }
+.partner-imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem,2vw,1.6rem); }
+.partner-imgs img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--r-lg); border: 1px solid var(--outline); }
+@media (max-width: 640px) { .partner-imgs { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; } }
