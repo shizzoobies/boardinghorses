@@ -48,3 +48,17 @@ review-*.jpeg
 review-*.png
 rev-*.jpeg
 rev-*.png
+
+# Leonardo working files (API key)
+_leo/
+
+# Jordan Stables raw source assets (processed copies live in public/assets)
+Jordan Stables/
+jordan-stables-images/
+
+# review screenshots
+js-*.jpeg
+m-*.jpeg
+jordan_*.jpg
+jordan_*.jpeg
+stitch_*.jpeg
