@@ -1,59 +1,49 @@
-# Horse Haven — Stable Website
+# Jordan Stables — Website
 
-Warm, family-friendly marketing website for **Horse Haven**, a horse stable offering **boarding** and **lessons / training**.
+Marketing website for **Jordan Stables** — *Building a Partnership Between Horse & Rider.*
+Riding lessons, clubs & programs, training, and horse camps.
+
+> Previously this repo held a "Horse Haven" demo; it was replaced by the real Jordan
+> Stables build (recoverable in git history before commit `e42a812`).
 
 ## Stack
-- **Design:** Google Stitch (generate UI), iterated with the client
-- **Build:** Static site (HTML/CSS/JS or Astro — TBD from design output)
+- **Build:** Hand-authored static site (HTML/CSS/JS, no framework, no build step)
+- **Design system:** "Equestrian Heritage" — Heritage Navy `#0A1F44` + Action Blue `#3A86FF`,
+  cream `#FDFCFB` surfaces, **Libre Caslon Text** (display) + **Manrope** (body), soft corners,
+  tonal layers (per the client `DESIGN.md`)
 - **Source control:** GitHub — [`shizzoobies/boardinghorses`](https://github.com/shizzoobies/boardinghorses)
 - **Hosting:** Cloudflare Pages (auto-deploy on push to `main`)
 
 ## Site map
-| Page | Purpose |
-|------|---------|
-| Home | Hero, value prop, links to boarding & lessons, primary CTA |
-| Boarding | Stall/pasture options, amenities, pricing tiers, photos |
-| Lessons & Training | Programs, levels, instructor bios, scheduling info |
-| Gallery | Facility & horse photos |
-| About | Story, team, location |
-| Contact | Form, map, hours, phone/email |
+| Page | File |
+|------|------|
+| Home | `index.html` |
+| Lessons | `lessons.html` |
+| Clubs & Programs | `clubs-programs.html` |
+| Meet the Team | `meet-the-team.html` |
+| Testimonials & FAQs | `testimonials-faqs.html` |
+| Gallery (filter + lightbox) | `gallery.html` |
+| Blog | `blog.html` |
+| Contact (demo form) | `contact.html` |
 
 ## Project structure
 ```
-public/              ← the static site (deploy root)
-  index.html         ← Home
-  boarding.html
-  lessons.html
-  gallery.html
-  about.html
-  contact.html
-  assets/
-    css/site.css     ← hand-authored design system ("Editorial Equestrian")
-    js/site.js       ← header state, scroll reveals, mobile nav, gallery filter
-    logo.jpg         ← generated logo (also used as favicon)
-    img/             ← page imagery (downloaded locally, self-contained)
+public/                      ← the static site (deploy root)
+  *.html                     ← the 8 pages
+  assets/css/site.css        ← Equestrian Heritage design system
+  assets/js/site.js          ← nav, reveals, gallery filter/lightbox, demo forms
+  assets/img/                ← logos (navy/white/badge), real photos, gallery/
 ```
-Hand-authored HTML + CSS (no framework, no build step). Type: **Fraunces** (display) +
-**Hanken Grotesk** (body) via Google Fonts. Design language: warm ivory paper, espresso
-ink, muted-sage accent; hairline rules and whitespace instead of cards; full-bleed imagery.
-
-## Status
-- [x] Repo connected, foundation files
-- [x] Design generated in Stitch (6 pages + logo)
-- [x] Images localized, navigation wired, favicon added
-- [ ] Design reviewed / approved by client
-- [ ] Cloudflare Pages connected & deployed
 
 ## Deploy (Cloudflare Pages)
-1. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git**
-2. Pick the `boardinghorses` repo, branch `main`
-3. Build settings:
-   - **Framework preset:** None
-   - **Build command:** *(leave empty)*
-   - **Build output directory:** `public`
-4. Save & Deploy. Every push to `main` auto-deploys.
+Framework preset **None** · Build command **(empty)** · Output directory **`public`** · Branch `main`.
 
-## Notes / future polish
-- Replace placeholder copy, stats (40 acres, 15+ years), prices, hours, contact details, and AI-generated imagery with real content.
-- The **contact form** is not yet wired to a backend — connect it to Cloudflare Pages Functions or a service like Formspree before launch (see the comment in `contact.html`).
-- The contact-page **map** is a styled placeholder linking out — swap in a real embedded map for the actual address.
+## Real details
+Owner **Anysa Jordan** · 📞 (602) 535-9577 · ✉️ contact@jordanstables.com ·
+IG/FB @jordanstablesaz · TikTok @jordan.stables · Horse Camp June 25–27.
+
+## Before launch
+- Wire the **contact form** + footer **newsletter** to a backend (Cloudflare Pages Functions / Formspree).
+- Add a real **street address + embedded map** (only phone/email are public today).
+- Confirm full **team roster** (only Anysa & Taylor are named); blog posts are sample content.
+- Raw source assets live in the gitignored `Jordan Stables/` folder; processed copies are in `public/assets/`.
