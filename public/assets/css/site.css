@@ -374,6 +374,16 @@ body.home .hero__inner { margin-left: auto; margin-right: 0; max-width: 540px; p
 body.home .hero { display: grid; align-items: center; }
 body.home .hero > .container { width: 100%; max-width: var(--container); margin-inline: auto; }
 
+/* hero secondary button: solid white w/ blue text so it stays legible over the video */
+.hero--media .btn--outline {
+  background: #fff; color: var(--blue-deep); border-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.hero--media .btn--outline:hover {
+  background: var(--blue); color: #fff; border-color: var(--blue);
+  box-shadow: 0 8px 22px -8px rgba(58,134,255,0.6);
+}
+
 /* events calendar embed — sits in a clean panel on the navy section */
 .calendar-embed {
   background: var(--cream);
